@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Neon Admin Panel" />
+	<meta name="author" content="" />
+
+	<title>VSMonitor Links</title>
+
+	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/neon-core.css">
+	<link rel="stylesheet" href="assets/css/neon-theme.css">
+	<link rel="stylesheet" href="assets/css/neon-forms.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script>$.noConflict();</script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	body{
+		padding:10px;
+	}
+	.postdiv{
+		float:left;
+		margin-left:8px;
+		padding:8px;
+		border:dashed 1px #aaa;
+		background:#eee;
+	}
+	.postdiv input{
+		margin-bottom:2px;
+	}
+	</style>
+
+</head>
+<body class="page-body">
+<!-- 
+document.manobra.submit();
+-->
+<div class="page-container">
+<div id="manobra" class="postdiv" >
+	<form name="manobra" id="manobra" target="_blank" method="post" action="http://appsagre.gvt.net.br/Manobraunica/main" >
+	Manobra Unica<br>
+		<input type="text" name="ba" 			value="" /><br>
+		<input type="text" name="acao" 			value="TEL"  /><br>
+		<input type="text" name="telefone"		value="6730466771"  /><br>
+		<input type="text" name="x"  			value="30" /><br>
+		<input type="text" name="y"  			value="10" /><br>
+		<input type="text" name="opcaotelefone" value=""   /><br>
+		<input type="text" name="opcaoBa"  		value="" /><br>
+		<input type="submit" value="ok" />
+	</form>
+</div>
+<div id="sas" class="postdiv" >
+	<form target="_blank" method="post" action="http://gvtapp/sas/configurar" >
+	SAS<br>
+		<input type="text" name="cmd" value="consultar" /></br>
+		<input type="text" name="itemCodeId" value="" /></br>
+		<input type="text" name="rn2_" value="" /></br>
+		<input type="text" name="telefoneDMS" value="4130842033" /></br>
+		<input type="text" name="emuladorTelNet" value="" /></br>
+		<input type="text" name="searchType" value="Consultar" /></br>
+		<input type="submit" value="ok" />
+	</form>
+</div>
+<div id="wise" class="postdiv" >
+	<form target="_blank" method="post" action="http://wisetool.gvt.net.br/wisetool/login" enctype="application/x-www-form-urlencoded">
+	Wise<br>
+		<input type="text" name="matricula" value="g0056638" /></br>
+		<input type="password" name="senha" value="" /></br>
+		<input type="submit" value="ok" />
+	</form>
+</div>
+<div id="massiva" class="postdiv" >
+	<form name="massiva" target="_blank" method="post" action="http://manobramassiva.gvt.net.br/ManobraMassiva/manobraPlanejamentoAction.do" enctype="application/x-www-form-urlencoded">
+	Massiva<br>
+
+		
+		<input type="text" name="operation" value="inicio" /></br>
+		<input type="text" name="servletState" value="" /></br>
+		<input type="text" name="equipDeName" value="" /></br>
+		<input type="text" name="equipParaName" value="" /></br>
+		<input type="text" name="vaba" value="" /></br>
+		<input type="text" name="equipDesinDesc" value="" /></br>
+		<input type="text" name="armarioOrigem.clliCode" value="" /></br>
+		<input type="text" name="armarioDestino.clliCode" value="" /></br>
+		<input type="text" name="cidadeOrigem.cityName" value="CURITIBA" /></br>
+		<input type="text" name="armarioOrigem.locationId" value="1366" /></br>
+		<input type="text" name="instancias" value="" /></br>
+		<input type="text" name="armarioDestino.locationId" value="" /></br>
+		<input type="text" name="shelfOrigem.tipoTecnologia" value="" /></br>
+		<input type="text" name="paraPortaInicial" value="" /></br>
+		<input type="submit" value="ok" />
+	</form>
+</div>
+
+
+
+
+
+
+	
+</div>
+<!-- Bottom scripts (common) -->
+<script src="assets/js/gsap/main-gsap.js"></script>
+<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/joinable.js"></script>
+<script src="assets/js/resizeable.js"></script>
+<script src="assets/js/neon-api.js"></script>
+<!-- JavaScripts initializations and stuff -->
+<script src="assets/js/neon-custom.js"></script>
+<!-- Demo Settings -->
+<script src="assets/js/neon-demo.js"></script>
+</body>
+</html>

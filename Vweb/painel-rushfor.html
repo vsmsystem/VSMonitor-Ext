@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Neon Admin Panel" />
+	<meta name="author" content="" />
+	
+
+	<link rel="apple-touch-icon" sizes="180x180" href="../imgs/painelicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="../imgs/painelicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../imgs/painelicons/favicon-16x16.png" sizes="16x16">
+	<link rel="mask-icon" href="../imgs/painelicons/safari-pinned-tab.svg" color="#5bbad5">
+
+	<title>VSMonitor Painel</title>
+
+	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/neon-core.css">
+	<link rel="stylesheet" href="assets/css/neon-theme.css">
+	<link rel="stylesheet" href="assets/css/neon-forms.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/toastr.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+<body class="page-body">
+<div id="tela" style="border:solid 1px #ff0000;position:absolute;margin-top:100px;">teste</div>
+<div class="page-container sidebar-collapsed"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+	
+	<div id="vsmlmenu" class="sidebar-menu fixed">
+		<script src="painel_menu.js"></script>
+	</div>
+
+	<div class="main-content">
+	
+		<div class="col-sm-12">
+			<div class="row">
+				<div class="col-sm-6">
+
+					<!-- http://10.40.174.101:8000/vsmonitor-imsdb.php -->
+					<div id="painel_imsdb" class="panel panel-primary" >
+						<div class="panel-heading">
+							<div class="panel-title">
+								Banco IMS 
+								<span id="ims-linecounter" class="badge badge-default" style="border:solid 1px #aaa;border-radius:3px;"> 0 </span>
+								<input type="text" id="imsdb-goto-f" style="height:19px;width:50px;border-radius:3px;border:solid 1px #999;">
+								<i name="imsdb-goto" class="glyphicon glyphicon-fast-forward" title=""></i>
+							</div>
+							<div class="panel-options">
+								<label><input type="checkbox" id="imsdb-autocheck"> AutoCheck</label>
+								<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-revisar" ><i name="imsdb-revisar" class="glyphicon glyphicon-repeat" title="Iniciar análise automática"></i></a> 
+								<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-pular" ><i name="imsdb-pular" class="glyphicon glyphicon-forward" title="Iniciar análise automática"></i></a> 
+								<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-auto" ><i name="imsdb-auto" class="glyphicon glyphicon-screenshot" title="Iniciar análise automática"></i></a> 
+								<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-filtrar" ><i name="imsdb-filtrar" class="glyphicon glyphicon-filter" title="Iniciar análise automática"></i></a> 
+								<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-carregar" ><i name="imsdb-carregar" class="glyphicon glyphicon-download-alt" title="Baixar lista"></i></a> 
+								<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> 
+								<a href="#" data-rel="close"><i class="entypo-cancel"></i></a> 
+							</div>
+						</div>
+						<div class="panel-body with-table">
+							<table class="table table-bordered table-striped datatable dataTable no-footer" id="table-imsdb" role="grid" aria-describedby="table-2_info"> 
+							<!--
+							<thead> 
+							
+							<tr role="row">
+								<th class="sorting" tabindex="0" aria-controls="table-2" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending" style="width: 203px;">
+									ID
+								</th>
+								<th class="sorting" tabindex="0" aria-controls="table-2" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending" style="width: 203px;">
+									Instancia
+								</th>
+								<th class="sorting" tabindex="0" aria-controls="table-2" rowspan="1" colspan="1" aria-label="Average Grade: activate to sort column ascending" style="width: 130px;">
+									Shelf
+								</th>
+								<th class="sorting" tabindex="0" aria-controls="table-2" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 292px;">
+									Actions
+								</th>
+							</tr>
+							</thead> 
+							-->
+							<!--<tbody>    
+								
+								<tr role="row" class="odd"> 
+									<td>4100000000</td> 
+									<td>xxxx</td> 
+									<td> <a href="#">    <i data-id="1" id="imsdb-comparar" class="entypo-cog"></i>   </a></td> 
+								</tr>                                                           
+								<tr role="row" class="odd"> 
+									<td>4100000000</td> 
+									<td>xxxx</td> 
+									<td> <a href="#">    <i data-id="1" id="imsdb-comparar" class="entypo-cog"></i>   </a></td> 
+								</tr>                                                           
+								<tr role="row" class="odd"> 
+									<td>4100000000</td> 
+									<td>xxxx</td> 
+									<td> <a href="#">    <i data-id="1" id="imsdb-comparar" class="entypo-cog"></i>   </a></td> 
+								</tr>
+								
+
+								</tbody> 
+							-->
+							</table>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="panel panel-gray" ><!-- data-collapsed="1" -->
+						<!-- panel head -->
+						<div class="panel-heading">
+							<div class="panel-title">Teste Massiva</div>
+							<div class="panel-options">
+							<label><input checked=checked type="checkbox" name="autoRush" id="autoRush" /></label>
+							<a href="#" class="bg" style="padding:3px 6px 3px 6px;" name="rush-start"><i name="rush-start" class="glyphicon glyphicon-screenshot"></i></a>
+							<a href="#" class="bg" style="padding:3px 6px 3px 6px;" name="rush-next"><i name="rush-next" class="glyphicon glyphicon-forward"></i></a>
+							<a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> <a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a> </div>
+						</div>
+						<!-- panel body -->
+						<div class="panel-body with-table">
+							<div style="margin:2px;padding:2px;">
+								<select id="perfil" name="perfil" style="width:170px;">
+									<option value="">-- Selecione --</option>
+									<option value="MASSIVA_PRIMARIO_AC">MASSIVA_PRIMARIO_AC</option>
+									<option value="MASSIVA_PRIMARIO_AL">MASSIVA_PRIMARIO_AL</option>
+									<option value="MASSIVA_PRIMARIO_AM">MASSIVA_PRIMARIO_AM</option>
+									<option value="MASSIVA_PRIMARIO_AP">MASSIVA_PRIMARIO_AP</option>
+									<option value="MASSIVA_PRIMARIO_BA">MASSIVA_PRIMARIO_BA</option>
+									<option value="MASSIVA_PRIMARIO_CE">MASSIVA_PRIMARIO_CE</option>
+									<option value="MASSIVA_PRIMARIO_DF">MASSIVA_PRIMARIO_DF</option>
+									<option value="MASSIVA_PRIMARIO_ES">MASSIVA_PRIMARIO_ES</option>
+									<option value="MASSIVA_PRIMARIO_GO">MASSIVA_PRIMARIO_GO</option>
+									<option value="MASSIVA_PRIMARIO_MA">MASSIVA_PRIMARIO_MA</option>
+									<option value="MASSIVA_PRIMARIO_MG">MASSIVA_PRIMARIO_MG</option>
+									<option value="MASSIVA_PRIMARIO_MS">MASSIVA_PRIMARIO_MS</option>
+									<option value="MASSIVA_PRIMARIO_MT">MASSIVA_PRIMARIO_MT</option>
+									<option value="MASSIVA_PRIMARIO_PA ">MASSIVA_PRIMARIO_PA </option>
+									<option value="MASSIVA_PRIMARIO_PB">MASSIVA_PRIMARIO_PB</option>
+									<option value="MASSIVA_PRIMARIO_PE">MASSIVA_PRIMARIO_PE</option>
+									<option value="MASSIVA_PRIMARIO_PI ">MASSIVA_PRIMARIO_PI </option>
+									<option value="MASSIVA_PRIMARIO_PR">MASSIVA_PRIMARIO_PR</option>
+									<option value="MASSIVA_PRIMARIO_RJ">MASSIVA_PRIMARIO_RJ</option>
+									<option value="MASSIVA_PRIMARIO_RN">MASSIVA_PRIMARIO_RN</option>
+									<option value="MASSIVA_PRIMARIO_RO">MASSIVA_PRIMARIO_RO</option>
+									<option value="MASSIVA_PRIMARIO_RR">MASSIVA_PRIMARIO_RR</option>
+									<option value="MASSIVA_PRIMARIO_RS">MASSIVA_PRIMARIO_RS</option>
+									<option value="MASSIVA_PRIMARIO_SC">MASSIVA_PRIMARIO_SC</option>
+									<option value="MASSIVA_PRIMARIO_SE">MASSIVA_PRIMARIO_SE</option>
+									<option value="MASSIVA_PRIMARIO_SP">MASSIVA_PRIMARIO_SP</option>
+									<option value="MASSIVA_PRIMARIO_TO">MASSIVA_PRIMARIO_TO</option>
+								</select>	
+								<select name="cidadeOrigem.cityName" id="cidadeOrigem.cityName" style="width:170px;">
+									<option>Cidades</option>
+								</select>		
+								<select name="armarioOrigem.locationId" id="armarioOrigem.locationId" style="width:170px;">
+									<option>Ards</option>
+								</select>								
+								<div id="massivaPreview">
+								<div style="padding:5px 0px 5px 0px;">
+									<span  class="label label-default" style="border:solid 1px #aaa">UF: <span id="ufCounter">0</span> </span> &nbsp;
+									<span  class="label label-default" style="border:solid 1px #aaa">Cidade: <span id="cityCounter">0</span> </span> &nbsp;
+									<span  class="label label-default" style="border:solid 1px #aaa">ARD: <span id="ardCounter">0</span> </span> &nbsp;
+									<span  class="label label-default" style="border:solid 1px #aaa">Shelves Coletados: <span id="shelvesColetados">0</span> </span> &nbsp;
+								</div>
+								<select id="massivaShelves" style="width: 100%; height: 600px;" multiple=""></select>
+								</div>
+							</div>
+							<iframe id="terminalFrame" name="terminalFrame" src="" style="display:none;width:99%;height:400px;margin:0px;padding:0px;" src=""></iframe>
+						</div>
+					</div>
+
+				</div>
+				
+				
+				<div class="col-md-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title">Painel</div>
+							<div class="panel-options"> 
+							<a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg" ><i id="mostrarDebug" alt="Relatório de processamento (Debug)" title="Relatório de processamento (Debug)" class="entypo-doc-text-inv"></i></a> 
+							<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> 
+							<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> 
+							</div>
+						</div>
+						<div class="panel-body with-table">
+							<div id="uteis" class=""  data-collapsed="0">
+								<ul class="nav nav-tabs right-aligned" style="margin-top:5px;">
+									<!-- available classes "bordered", "right-aligned" -->
+									<li class="active">
+										<a href="#dtab-geral" data-toggle="tab" aria-expanded="true"> 
+										<span class="visible-xs"><i class="entypo-home"></i></span> <span class="hidden-xs">Geral</span> 
+										</a>
+									</li>
+									<li name="dashboard-check"  class="">
+										<a href="#dtab-dashboard" name="dashboard-check" data-toggle="tab" aria-expanded="false"> 
+										<span class="visible-xs"><i class="entypo-user"></i></span> 
+										<span name="dashboard-check" class="hidden-xs">Dashboard </span> 
+										</a>
+									</li>
+									<li class="">
+										<a href="#dtab-ttv" data-toggle="tab" aria-expanded="false"> 
+										<span class="visible-xs"><i class="entypo-user"></i></span> 
+										<span class="hidden-xs">TTV </span> 
+										</a>
+									</li>
+									<li class="">
+										<a href="#dtab-eta" data-toggle="tab" aria-expanded="false"> 
+										<span class="visible-xs"><i class="entypo-user"></i></span> 
+										<span class="hidden-xs">ETA <span class="badge badge-warning">4</span></span> 
+										</a>
+									</li>
+									<li class="">
+										<a href="#dtab-profile-2" data-toggle="tab" aria-expanded="false"> 
+										<span class="visible-xs"><i class="entypo-user"></i></span> 
+										<span class="hidden-xs">Erros <span class="badge badge-secondary">2</span></span> 
+										</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div id="dtab-dashboard" class="tab-pane " style="padding:0px 10px 0px 10px;" >
+										<div class="" style="position: relative; overflow: hidden; width: auto; height: 120px;">
+											<div class="scrollable" data-height="120" style="overflow: hidden; width: auto; height: 120px;">
+												<div class=""> 
+														<table class="table">
+															<tbody>
+																<tr>
+																	<td width="33%" style="border-top-width: 0px;padding: 0px;"> 
+																		
+																		<div id="eta_dashboard">ETA<br><br><br></div>							
+																	</td>
+																	<td width="33%" style="border-top-width: 0px;padding: 0px;"> 
+																		<div id="at_dashboard">	
+																		<table width="100%">
+																			<tr><td colspan="2" style="border-bottom:solid 1px #f5f5f5;"><strong>Atendidas</strong></td></tr>
+																			<tr><td>Manobra</td> <td>21</td></tr>
+																			<tr><td>TL     </td> <td>4</td></tr>
+																			<tr><td>Suporte</td> <td>2</td></tr>
+																		</table>
+																		</div>	
+						...											</td>
+																	<td width="33%" style="border-top-width: 0px;padding: 0px;"> 
+																		<div id="op_dashboard">
+																		<table width="100%">
+																			<tr><td colspan="2" style="border-bottom:solid 1px #f5f5f5;"><strong>Simulador</strong></td></tr>
+																			<tr><td>TMA</td> <td><span class="verde"> 08:29 </span></td></tr>
+																			<tr><td>FCR</td> <td><span class="verde"> 76% </span></td></tr>
+																			<tr><td>Aderencia</td> <td><span class="laranja"> 85,44% </span></td></tr>
+																		</table>
+																		</div>	
+						...											</td>
+																</tr>
+															</tbody>
+														</table>
+												</div> 
+											</div>
+										</div>
+									</div>
+									<div id="dtab-ttv" class="tab-pane " style="padding:0px 10px 0px 10px;" >
+										<div class="" style="position: relative; overflow: hidden; width: auto; height: 120px;">
+											<div class="scrollable" data-height="120" style="overflow: hidden; width: auto; height: 120px;">
+												<div id="ttv_box" class=""> 
+													TotalView escalas: Se você está vendo esta mensagem, seu total view não está logado, clique no totalview na barra do keeper no topo da tela, ou logue manualmente o total view em uma nova aba.
+												</div> 
+											</div>
+										</div>
+									</div>
+									<div id="dtab-eta" class="tab-pane " style="padding:0px 10px 0px 10px;" >
+										<div class="" style="position: relative; overflow: hidden; width: auto; height: 120px;">
+											<div class="scrollable" data-height="120" style="overflow: hidden; width: auto; height: 120px;">
+												<div id="eta_atendimento" class=""> 
+													...
+												</div> 
+											</div>
+										</div>
+									</div>
+									<!--<div id="dtab-geral-old" class="tab-pane active" style="padding:0px 10px 0px 10px;">
+										<div class="" style="position: relative; overflow: hidden; width: auto; height: 120px;">
+											<div class="scrollable" data-height="120" style="overflow: hidden; width: auto; height: 120px;">
+												<div id="uteispainel" class=""> 
+													Documento: <span class=" azul">1234567890 </span><br> 
+													Distancia: <span class=" azul">609 Metros </span><br> 
+													Serviços: <span class=" azul">... </span><br> 
+													Banda contratada: <span class=" azul">25MB </span> 
+												</div> 
+											</div>
+										</div>
+									</div>-->
+									<div id="dtab-geral" class="tab-pane active" style="padding:0px 10px 0px 10px;">
+										<div class="" style="position: relative; overflow: auto; width: auto; height: 120px;">
+											<div class="scrollablex" data-height="120" style="overflow: auto; width: auto; height: 120px;">
+												<div id="gpsInfoS" class=""> 
+														<table class="table">
+															<tbody>
+																<tr>
+																	<td id="gpsInfo1" width="50%" style="border-top-width: 0px;padding: 0px;"> 
+																		<div id="at_dashboard">	
+																			Cliente:   <span id="gpsInfo-cliente" class=" azul">... </span><br> 
+																			Documento: <span id="gpsInfo-documento" class=" azul">... </span><br> 
+																			Atividade:  <span id="gpsInfo-atividade" class=" azul">... </span><br> 
+																			PON:  <span id="gpsInfo-pon" class=" azul">... </span><br> 
+																			Distancia: <span id="wiseInfo-distancia" class=" azul">...</span><br> 
+																			Banda contratada: <span id="wiseInfo-banda" class=" azul">... </span> <br>
+																			Armário: <span id="gpsInfo-armario" class=" azul">... </span> 
+																		</div>	
+																	</td>
+																	<td id="gpsInfo2" width="50%" style="border-top-width: 0px;padding: 0px;"> 
+																		Instancias e Designadores (GPS)
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+												</div> 
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane" style="padding:0px 10px 0px 10px;" id="dtab-profile-2">
+										 - Manobra unica sem secundario no sagre<br>
+										 - Voz não assinalada no TBS<br>
+										 - Shasta está diferente da binada<br>
+									</div>
+
+								</div>
+							</div>
+						<div id="uteis2" class="panel panel-default" style="margin:0px;display:none;" data-collapsed="0">
+						<!-- to apply shadow add class "panel-shadow" -->
+						<!-- panel head --> 
+						<div class="panel-heading"> 
+						<div class="panel-title">Informações uteis</div> 
+						<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-3" class="bg">
+						<i class="entypo-cog"></i></a> <a href="#" data-rel="collapse">
+						<i class="entypo-down-open"></i></a> <a href="#" data-rel="reload">
+						<i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close">
+						<i class="entypo-cancel"></i></a> 
+						</div> 
+						</div> <!-- panel body --> 
+						<div id="" class="panel-body"> 
+						Documento: <span class=" azul">1234567890 </span><br> Distancia: <span class=" azul">609 Metros </span><br> Serviços:
+											<span class=" azul">... </span><br> Banda contratada: <span class=" azul">25MB </span></td> 
+						</div> 
+						</div>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title">Diagnóstico</div>
+							<div class="panel-options"> 
+							<a href="#" class="bg" style="border:solid 1px #bbb;padding:0px 5px 0px 5px;margin:0px 0px 0px 0px" name="addchecklist-full" >  <i name="fullSearch" class="entypo-reply"></i> Checklist <label><input type="checkbox" id="autochecklist" style="margin-top:6px;" /></label> </a> 							
+							<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="fullSearch" ><i name="fullSearch" class="glyphicon glyphicon-flash"></i></a> 
+							<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> <a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a> </div>
+						</div>
+						<div class="panel-body">
+						x
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+					
+			</div>
+			
+			
+			
+	
+					
+			</div>
+		</div>
+	<!-- Footer -->
+		<footer class="main">
+			
+			
+		
+		</footer>
+	</div>
+
+	
+	
+</div>
+
+
+	<!-- Modal 3 (Custom Width)-->
+	<div class="modal fade custom-width" id="modal-debug">
+		<div class="modal-dialog" style="width: 96%">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">DebugBox</h4>
+				</div>
+				<div class="tabs-vertical-env"> 
+					<ul class="nav tabs-vertical"><!-- available classes "right-aligned" --> 
+						<li class="active"><a href="#debug-main" data-toggle="tab">DebugBox</a></li> 
+						<li><a href="#debug-gps" data-toggle="tab">GPS</a></li> 
+						<li><a href="#debug-manobra" data-toggle="tab">Manobra Única</a></li> 
+						<li><a href="#debug-sas"     data-toggle="tab">SAS</a></li> 
+						<li><a href="#debug-wise"    data-toggle="tab">WiseTool</a></li> 
+						<li><a href="#debug-pn"      data-toggle="tab">PnAdmin Principal</a></li> 
+						<li><a href="#debug-pncx"     data-toggle="tab">PnAdmin PTS/CX</a></li> 
+						<li><a href="#debug-gestor"     data-toggle="tab">Gestor de Bloqueios</a></li> 
+						<li><a href="#debug-transferb"     data-toggle="tab">Transfer Box</a></li> 
+					</ul> 
+					<div class="tab-content"> 
+						<div class="tab-pane active" id="debug-main">
+							<div>Habilitar debug para: <select><option> Todos </option></select></div>
+							<div id="debugbox" class="modal-body"> ... </div>
+						</div> 
+						<div class="tab-pane" id="debug-gps"> Nenhum log. </div> 
+						<div class="tab-pane" id="debug-manobra"> Nenhum log. </div> 
+						<div class="tab-pane" id="debug-sas"> Nenhum log. </div> 
+						<div class="tab-pane" id="debug-wise"> Nenhum log. </div> 
+						<div class="tab-pane" id="debug-pn"> Nenhum log. </div> 
+						<div class="tab-pane" id="debug-pncx"> Nenhum log. </div> 
+						<div class="tab-pane" id="debug-gestor"> Nenhum log. </div> 
+						<div class="tab-pane" id="debug-transferb"> Nenhum log. </div> 
+					</div>
+				</div>
+
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Modal 3 (Custom Width)-->
+	<div class="modal fade custom-width" id="modal-frame">
+		<div class="modal-dialog" style="width: 96%">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">VSMonitor ToolBox</h4>
+				</div>
+				
+				<div id="modalframe" class="modal-body" style="padding:2px;">
+					<table width="100%">
+						<tr>
+							<td width="250px" valign="top" style="padding-left:5px;">
+								<h4>OS</h4>
+								<div>
+								Atividade: <span id="provisioning-atividade"></span><br>
+								PON: <span id="provisioning-pon"></span><br>
+								</div>
+								<hr>
+								<h4>Equipamentos</h4>
+								<div id="provisioning-equipamentos">
+								</div>
+								
+							</td>
+							<td>
+							<iframe sandbox="allow-modals allow-forms allow-pointer-lock	 allow-same-origin	allow-scripts allow-popups" name="toolFrame" style="width:100%;height:600px;" src="" frameborder="none" ></iframe>
+							</td>
+						</tr>
+					
+					</table>
+				</div>
+				<!--
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	<!-- Modal Massiva SAS-->
+	<div class="modal fade custom-width" id="eventosMassivosSAS">
+		<div class="modal-dialog" style="width: 700px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Eventos Massivos</h4>
+				</div>
+				
+				<div class="modal-body">
+					<div>
+					<blockquote class="blockquote-red" id="eventoMassivoMSG" style="display:none;"> 
+
+					</blockquote>
+					</div>
+					<div id="eventosMassivosSAS-c"></div>
+
+					
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	<!-- Modal Gestor-->
+	<div class="modal fade custom-width" id="modalGestor">
+		<div class="modal-dialog" style="width: 900px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Gestor de bloqueios</h4>
+				</div>
+				
+				<div class="modal-body">
+					<div id="modalGestor-c"></div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	<!-- Modal ordens GPS SAS-->
+	<div class="modal fade custom-width" id="ordensAtivasGPS">
+		<div class="modal-dialog" style="width: 700px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Ordens ativas</h4>
+				</div>
+				
+				<div class="modal-body">
+						<div id="ordensAtivasGPS-c"></div>
+
+					
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+		
+	<!-- Modal Centrais-->
+	<div class="modal fade custom-width" id="modal-centraltech">
+		<div class="modal-dialog" style="width: 700px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Centrais</h4>
+				</div>
+				
+				<div class="modal-body">
+					<div id="centraltech-conteudo"></div>
+					<!--
+					<iframe width="100%" height="400px" frameborder="none" src="https://webssh.bartlweb.net"></iframe>
+					-->
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+	
+	<!-- Modal Keeper -->
+	<div class="modal fade custom-width" id="modal-keeper">
+		<div class="modal-dialog" style="width: 700px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">VSMonitor Painel</h4>
+				</div>
+				<div class="modal-body">
+					<table width="100%">
+					<tr>
+					<td width="50%" valign="top" style="padding-right:5px;">
+						<div id=""></div>
+						<div style="width:100%;"> 
+						<form name="keeper_form" action="#">
+						Informações:<br>
+							<div class="input-group minimal"> 
+								<span class="input-group-addon"><i class="entypo-vcard"></i></span> 
+								<input id="keeper_name" type="text" class="form-control" placeholder="Nome" required="required"> 
+							</div> 
+							<div class="input-group minimal"> 
+								<span class="input-group-addon"><i class="entypo-user"></i></span> 
+								<input id="keeper_user" type="text" class="form-control" placeholder="Matricula" required="required"> 
+							</div> 
+							<div class="input-group minimal"> 
+								<span class="input-group-addon"><i class="entypo-key"></i></span> 
+								<input id="keeper_pass" type="password" class="form-control" placeholder="Senha" required="required"> 
+							</div> 
+							<br>Setor / Skill:<br>
+							<select id="skillPadrao" style="width:100%;" required="required">
+							<option value=""> Selecione </option>
+							<option value="Manobra"> Manobra / Cadastro </option>
+							<option value="Multiskill"> Multiskill / Suporte </option>
+							<option value="Especializada"> Especializada </option>
+							<option value="Checklist"> Checklist / Baixa </option>
+							<option value="Triagem"> Triagem </option>
+							</select>
+							<br><br>
+							Opções:<br>
+							<input type="checkbox" checked="checked" /> Efetuar Login automaticamente<br><br>
+							<input id="keeper_confirma" type="submit" value="Confirmar" /input> | <button id="keeper_deletar" type="button">Deletar</button>  <br>
+							
+							
+						</form>
+						</div><br>
+						<div id="keeper_msg"></div>
+					</td>
+					<td width="50%" valign="top" style="padding-left:5px">
+						Telnet (Putty):<br>
+							<select style="width:100%;">
+								<option> G0056638 </option>
+								<option> G0047430 </option>
+							</select><br>
+							<input id="telnet_login" type="text" class="form-control" placeholder="Login" style="width:100px;display:inline;"> 
+							<input id="telnet_pass" type="password" class="form-control" placeholder="Senha" style="width:100px;display:inline;">  
+							<button type="button"  style="display:inline;"> Add </button>  
+							<button type="button"  style="display:inline;"> Del </button>  
+
+					</td>
+					</tr>
+					</table>
+					
+					<!--
+					<iframe width="100%" height="400px" frameborder="none" src="https://webssh.bartlweb.net"></iframe>
+					-->
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<div id="containerTemporario"></div>
+
+	
+	
+	
+		
+	<div style="position: absolute;top:-9000px; width: 99px; height: 66px; margin: 0px;">
+	<textarea id="txtfinal" class="txtfinal" > &nbsp; </textarea>
+	<textarea id="txttemp" class="txttemp" > &nbsp; </textarea>
+	</div>
+	
+	<script src="auto-complete.js"></script>
+	<script src="painel-rushfor.js"></script>
+	<!-- Bottom scripts (common) -->
+	<script src="assets/js/gsap/main-gsap.js"></script>
+	<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/joinable.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/neon-api.js"></script>
+
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/neon-custom.js"></script>
+
+
+	<!-- Demo Settings -->
+	<script src="assets/js/neon-demo.js"></script>
+
+</body>
+</html>

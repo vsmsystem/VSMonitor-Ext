@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Neon Admin Panel" />
+	<meta name="author" content="" />
+	
+
+	<link rel="apple-touch-icon" sizes="180x180" href="../imgs/painelicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="../imgs/painelicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../imgs/painelicons/favicon-16x16.png" sizes="16x16">
+	<link rel="mask-icon" href="../imgs/painelicons/safari-pinned-tab.svg" color="#5bbad5">
+
+	<title>VSMonitor Painel</title>
+
+	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/neon-core.css">
+	<link rel="stylesheet" href="assets/css/neon-theme.css">
+	<link rel="stylesheet" href="assets/css/neon-forms.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/toastr.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+<body class="page-body">
+<div id="tela" style="border:solid 1px #ff0000;position:absolute;margin-top:100px;">teste</div>
+<div class="page-container sidebar-collapsed"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+	
+	<div class="sidebar-menu fixed">
+
+		<div class="sidebar-menu-inner ps-container ps-active-y">
+			
+			<header class="logo-env">
+
+				<!-- logo -->
+				<div class="logo">
+					<a href="index.html">
+						<img src="assets/images/logo@2x.png" width="120" alt="" />
+					</a>
+				</div>
+
+				<!-- logo collapse icon -->
+				<div class="sidebar-collapse">
+					<a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+								
+				<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+				<div class="sidebar-mobile-menu visible-xs">
+					<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+			</header>
+			
+									
+			<ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li class="opened">
+					<a href="#">
+						<i class="entypo-monitor"></i>
+						<span class="title">Atendimentos</span>
+					</a>
+					<ul class="">
+						<li class="active">
+							<a href="#">
+								<span class="title">Atendimento</span>
+							</a>
+						</li>
+
+
+						<li>
+							<a href="#">
+								<span class="title">Histórico</span>
+							</a>
+						</li>
+
+
+						<li>
+							<a href="#">
+								<span class="title">Fila de Retorno</span>
+							</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="root-level"> <a href="#" target="_blank">
+					<i class="entypo-chart-bar"></i>
+					<span class="title">Meus Indicadores</span></a> 
+				</li>
+				<li class="root-level"> <a href="#" target="_blank">
+					<i class="glyphicon glyphicon-wrench"></i>
+					<span class="title">Ferramentas</span></a> 
+				</li>
+				<li class="root-level"> <a href="#" target="_blank">
+					<i class="entypo-globe"></i>
+					<span class="title">Social</span></a> 
+				</li>
+				<li class="root-level"> <a href="#" target="_blank">
+					<i class="entypo-cog"></i>
+					<span class="title">Opções</span></a> 
+				</li>
+				
+				<li>
+					<a href="#">
+						<i class="entypo-layout"></i>
+						<span class="title">Histórico de Atualizações</span>
+					</a>
+					<ul>
+						<li>
+							<a href="#">
+								<span class="title">Novidades</span>
+								<span class="badge badge-success badge-roundless">Em breve</span>
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+			</ul>
+			
+		</div>
+
+	</div>
+
+	<div class="main-content">
+		<div class="col-sm-12">
+			<div class="row">
+				<div class="col-sm-6">
+					<div  class="panel panel-custom1">
+						<div class="panel-heading" >
+							<div class="panel-title">Atendimento (Checknote)</div>
+			
+							<div class="panel-options">
+							<a href="#" data-rel="close" class="bg"><i class="entypo-switch"></i></a>
+							<a href="#" data-rel="close"><i class="entypo-location"></i></a>
+								<a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" ><i class="entypo-cog"></i></a>
+								<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+								<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a>
+								<a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+							</div>
+						</div>
+			
+						<div class="panel-body">
+							<div style="padding-bottom:5px;">
+								<div class="btn-group"> 
+									<button type="button" class="btn btn-info btn-xs">Novo</button> 
+									<button type="button" class="btn btn-info btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> 
+										<i class="entypo-list-add"></i> 
+									</button>
+									<ul class="dropdown-menu dropdown-danger" role="menu">
+										<li><a href="#"><i class="entypo-right"></i>Manobra</a> </li>
+										<li><a href="#"><i class="entypo-right"></i>TL</a> </li>
+										<li><a href="#"><i class="entypo-right"></i>Multiskill</a> </li>
+										<li class="divider"></li>
+										<li><a href="#"><i class="entypo-menu"></i>Apenas registrar</a> </li>
+									</ul>
+								</div>
+								
+								<button type="button" class="btn btn-green btn-icon btn-xs">
+									Salvar <i class="entypo-check"></i> 
+								</button>
+								
+								<button type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;"> <i class="entypo-trash"></i> </button>
+								<button type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;"> <i class="entypo-list-add"></i> </button>
+								<button type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;"> <i class="entypo-down-thin"></i><i class="entypo-phone"></i> </button>
+								<div class="btn-group pull-right" style="border:solid 1px #aaa;"> 
+									<button type="button" class="btn btn-default btn-xs">Chamados e outros</button> 
+									<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> 
+										<i class="entypo-list-add"></i> 
+									</button>
+									<ul class="dropdown-menu dropdown-danger" role="menu">
+										<li><a href="#"><i class="entypo-right"></i>SAN - WiseTool</a> </li>
+										<li><a href="#"><i class="entypo-right"></i>SAN - TBS</a> </li>
+										<li><a href="#"><i class="entypo-right"></i>SAN - Instancias</a> </li>
+										<li><a href="#"><i class="entypo-right"></i>SAN - Bloqueio</a> </li>
+										<li><a href="#"><i class="entypo-right"></i>SAN - Desbloqueio</a> </li>
+										<li class="divider"></li>
+										<li><a href="#"><i class="entypo-menu"></i>Feedback</a> </li>
+										<li><a href="#"><i class="entypo-menu"></i>Feedback - critico</a> </li>
+									</ul>
+								</div>				
+
+							</div>
+							
+							<div style="">
+								<div style="float:left;width:205px;">
+									<div style="padding:3px;border:dotted 1px #999999;margin-top:0px;height:62px;"> 
+										<button class="copiar" type="button" onmouseover="preencheNotas();">Copiar</button>
+										<button class="copiar" type="button" onmouseover="preencheNotas();">ETA</button>
+										<button class="copiar" type="button" onmouseover="preencheNotas();">Retorno</button>
+										<span id="cpstatus"></span>
+									</div>
+								</div>
+								<div style="float:left;"> 
+								<div style="float:left;"> </div>
+								<div style="float:left;width:10px;"> &nbsp; </div>
+								<div style="float:left;"> <input type="checkbox" checked="checked" id="filtroTransfer" onclick="boxChecker(this.id);">Transfer: <br><textarea id="txttransfer" onblur="preencheManobra();" style="width: 80px;height:40px;"></textarea></div>
+								<div style="float:left;"> <input type="checkbox" checked="checked" id="filtroManobra" onclick="boxChecker(this.id);">Manobra: <br><textarea id="txtmanobra" onblur="preencheManobra();" style="width: 70px;height:40px;"></textarea></div>
+								<div style="float:left;"> <input type="checkbox" checked="checked" id="filtroSas" onclick="boxChecker(this.id);">SAS: <br><textarea id="txtsas" onblur="preencheSas();" style="width: 70px;height:40px;"></textarea></div>
+								<div style="float:left;"> <input type="checkbox" checked="checked" id="filtroWise" onclick="boxChecker(this.id);">Wise/Efika: <br><textarea id="txtwise" onblur="preencheWise();" style="width: 70px;height:40px;"></textarea></div>
+								</div>
+								<hr style="clear: both;">
+							</div>
+							<div id=""> 
+							<input id="campo_operador" class="noinp" type="text" placeholder="Apresentação, ex: Setor - Matricula - Nome" style="width:405px;" value="C.O Manobra - G0056638 - VALDECIR SANTIAGO MERLI" /> 
+							<br>
+							<table>
+							<tr>
+							<td>Instancia: </td>
+							<td><input class="noinp" id="instancia" type="text" placeholder="4125251515" /> 
+							Binada <input class="noinp" id="binada" type="text" placeholder="4125251515" /> 
+							<span style="display:none;">
+							  Skill: 
+							  <select id="color">
+							   <option value="red">Manobra</option>
+							   <option value="green">TL</option>
+							   <option value="blue">Suporte</option>
+							   <option value="yellow">Especializada</option>
+							  </select>
+							 </span>
+							  <label style="display:none;">
+								<input type="checkbox" id="like">
+								Enviar para retorno
+							  </label>
+							  </td></tr>
+							  <td> Tecnico </td><td>
+							  <input id="tecnico" class="noinp" type="text" placeholder="Nome" style="width:250px;" /> 
+							  <input id="tmatricula" class="noinp" type="text" placeholder="Matricula" style="width:100px;" /> 
+							  <!-- <input class="noinp" type="text" placeholder="PDA" style="width:100px;" /> -->
+							  </td></tr>
+							  <td> Cliente </td><td>
+							  <input id="cliente" class="noinp" type="text"placeholder="Nome" style="width:250px;" />
+							  <input class="noinp" type="text"placeholder="Documento" style="width:100px;" />
+							  </td></tr>
+							  <td> Tipo </td><td>
+							  <input class="noinp" type="text" disabled=disabled style="width:250px;" value="Tipo: Defeito - Banda" />
+							  </td></tr>
+							  <td> Motivo </td><td>
+							  <input class="noinp" type="text" placeholder="Motivo" style="width:250px;" />
+							  </td></tr>
+							  <td> Primario </td><td>
+							  <input class="noinp" type="text" placeholder="Primario" style="width:250px;" />
+							  </td></tr>
+							  <td> Testados </td><td>
+							  <input class="noinp" type="text" placeholder="Testados"  style="width:250px;" />
+
+							  </td></tr>
+							  <td> Binadas </td><td>
+							  <input class="noinp" type="text" placeholder="Binadas" style="width:250px;" />
+							  </td></tr>
+							  </table>
+							  <table width="100%">
+							  <tr>
+							  <td valign="top" width="60%" style="padding-right:2px;">
+							  Testes e Log:
+								  <div id="" style="white-space:pre-line;border:dashed 1px #aaa;padding:5px;margin:2px;" contenteditable="true">SAS
+								  IMS V5ID:1541194  Cidade:CSL_  Porta:84 Status:1-Registrado
+								  </div>
+								  <div id="" style="white-space:pre-line;border:dashed 1px #aaa;padding:5px;margin:2px;" contenteditable="true">TBS
+									Armário: O1A19
+									Porta: CSLA194-IMS-84 (COMBO) Primário V3-H2-0-84
+									Secundário: 103
+									Caixa: A19P11 Par 103
+									Dados	ADSL-84 ETH 2+ Primário V3-H2-0-84 TDM/H248
+									Voz	CSLA194-IMS-84 Primário V3-H2-0-84
+									Rin	A19-RIN-096
+									</div>
+								  <div id="" style="white-space:pre-line;border:dashed 1px #aaa;padding:5px;margin:2px;" contenteditable="true">Banda
+									Velocidade: [ 17663.4 / 1215.9 ] 
+									Sinal Ruído: [ 11 / 7 ] 
+									Atenuação: [ 0 / 4 ] 
+								  </div>
+							  </td>
+							  <td valign="top" width="40%">
+							  Notas de Operador:<br>
+							  <select style="width:100%;"><option>Frases Prontas</option></select><br>
+							  <textarea style="width:100%;min-height:100px;background:#dfdfdf;border:dashed 1px #aaa;"></textarea>
+							  
+							  Notas Particulares:<br>
+							  <textarea style="width:100%;min-height:100px;background:#dfdfdf;border:dashed 1px #aaa;"></textarea>
+							  </td>
+							  </tr>
+							  </table>
+
+							  <div id="status"></div>
+							  <button id="save">Save</button>
+
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-dark" data-collapsed="1">
+						<!-- panel head -->
+						<div class="panel-heading">
+							<div class="panel-title">Console SSH/Telnet</div>
+							<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> <a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a> </div>
+						</div>
+						<!-- panel body -->
+						<div class="panel-body with-table">
+							<div style="margin:2px;padding:2px;">
+								IP ou Nome da central: <input type="text" /> <button id="terminalCon" type="button">Conectar</button>
+							</div>
+							<iframe id="terminalFrame" name="terminalFrame" src="" style="width:99%;height:400px;margin:0px;padding:0px;" src=""></iframe>
+						</div>
+					</div>
+
+				</div>
+				
+				
+				<div class="col-md-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title">Diagnóstico</div>
+							<div class="panel-options"> 
+							<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" ><i id="fullSearch" class="glyphicon glyphicon-flash"></i></a> 
+							<a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg" ><i id="mostrarDebug" class="entypo-cog"></i></a> 
+							<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> <a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a> </div>
+						</div>
+						<div class="panel-body with-table">
+						<div id="uteis" class="panel panel-default" style="margin:0px;" data-collapsed="0">
+						<!-- to apply shadow add class "panel-shadow" -->
+						<!-- panel head --> 
+						<div class="panel-heading"> 
+						<div class="panel-title">Informações uteis</div> 
+						<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-3" class="bg">
+						<i class="entypo-cog"></i></a> <a href="#" data-rel="collapse">
+						<i class="entypo-down-open"></i></a> <a href="#" data-rel="reload">
+						<i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close">
+						<i class="entypo-cancel"></i></a> 
+						</div> 
+						</div> <!-- panel body --> 
+						<div id="uteispainel" class="panel-body"> 
+						Documento: <span class=" azul">1234567890 </span><br> Distancia: <span class=" azul">609 Metros </span><br> Serviços:
+											<span class=" azul">... </span><br> Banda contratada: <span class=" azul">25MB </span></td> 
+						</div> 
+						</div>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th width="50%">Informações
+											<div style="" class="panel-options pull-right"> 
+												<div class="dropdown">
+												  <a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-arrows-ccw"></i></a>
+												  <ul class="pull-right dropdown-menu">
+													<li><a href="#">Tecnico Checklist (recarregar)</a></li>
+													<li><a href="#">Cliente Blacklist (recarregar)</a></li>
+													<li><a href="#">Massiva SAS (recarregar)</a></li>
+												  </ul>
+												</div>
+											</div>
+
+										</th>
+										<th>TBS
+											<div style="" class="panel-options pull-right"> 
+												<div class="dropdown">
+												  <a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-arrows-ccw"></i></a>
+												  <ul class="pull-right dropdown-menu">
+													<li><a href="#" id="diagnosticarTBS">TBS (recarregar)</a></li>
+												  </ul>
+												</div>
+											</div>
+
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> 
+
+											<table style="width:100%;" class="">
+												<tbody>
+													<tr><td>Tecnico Checklist:</td> <td> </td> <td id="tecChecklistStatus" style="width:50px;"><!--<span style="" class="label label2 label-default"></span>--> </td></tr>
+													<tr><td>Cliente HeavyUser:</td> <td> </td> <td id="cliHeavyUserStatus" ><!--<span style="" class="label label2 label-danger">Sim</span>--> </td>  </tr>
+													<tr><td>Massiva SAS:      </td> <td> </td> <td id="massivaSasStatus"><!--<div style="" class="label label2 label-success">Não</div>--> </td>  </tr>
+													<tr><td>Central de Origem:</td> <td id="swLogoOri"> </td> <td id="centralOrigem" > </td> </tr>
+													<tr><td>Central Atual:    </td> <td id="swLogoNow"> </td> <td id="centralAtual" > </td> </tr>
+												</tbody>
+											</table>
+										</td>
+										<td id="diagnostico_TBS">
+											<div id="diagnostico_TBSc" class="ui-datalist-content ui-widget-content">
+											<!--Armário: <span class=" verde">O1A60</span><br>
+											Secundário: TBS (<span class=" verde">1300</span>)  <br>
+											Secundário Sagre: (A600130-<span class=" verde">1300</span>)<br>
+											Voz	<span class=" verde">RJOA-601-319</span> <br>
+											Dados	<span class=" verde">VDSL-1319</span> TDM/H248<br>
+											Rin	<span class=" verde">A60-RIN-136</span><br></div>-->
+											<br><br>
+										</td>
+									</tr>
+								</tbody>
+								
+							</table>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th width="50%">PnAdmin (Central)
+											<div style="" class="panel-options pull-right"> 
+												<div class="dropdown">
+												  <a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-arrows-ccw"></i></a>
+												  <ul class="pull-right dropdown-menu">
+													<li><a id="diagnosticarPN" href="#">pnAdmin básico (recarregar)</a></li>
+													<li><a id="diagnosticarPNCX" href="#">pnAdmin CX (recarregar)</a></li>
+												  </ul>
+												</div>
+											</div>
+
+										</th>
+										<th>SAS (Linha)
+											<div style="" class="panel-options pull-right"> 
+												<div class="dropdown">
+												  <a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-arrows-ccw"></i></a>
+												  <ul class="pull-right dropdown-menu">
+													<li><a href="#" id="diagnosticarSAS">SAS (recarregar)</a></li>
+												  </ul>
+												</div>
+											</div>
+
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="padding:0px;">
+										<div id="diagnostico_PNc" class="diagdiv">
+										<br>
+											<!--Lista: 0000000000, Switch: XXXX_XXXX<br>
+											Equip: 0000000000, Switch: XXXX_XXXX<br>
+											processamento: Concluido.<br>-->
+										</div>
+											<div id="divisorCX" style="display:none;" class="divisorDiagnostico" >&nbsp;&nbsp; CX: </div>
+										<div id="diagnostico_PNCXc" class="diagdiv">
+											 <!-- - Lista: 0000000000, Eqp: 0000000000<br>-->
+										</div>
+										</td>
+										<td id="diagnostico_SAS">
+											<div id="diagnostico_SASc" class="ui-datalist-content ui-widget-content">
+											<!--Central SAS: <span class="negrito verde">XXXX_XXXXX</span><br>
+											Equip: Nao<br>
+											Bloqueios: <span class="negrito vermelho">SIM</span><br>
+											Facilidade: <span class="negrito verde">BSAA  XX X XX XX</span><br>
+											CUSTGRP: <span class="negrito verde">XXX_POS</span><br>NCOS: 115<br>
+											OPTIONS: <span class="negrito verde">DGT DDN NOAMA CWT 3WC</span><br>
+											Evento Massivo: <span class="negrito verde">NAO</span> <br>--></div>
+										</td>
+									</tr>
+								</tbody>
+								
+							</table>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Parametros
+											<div style="" class="panel-options pull-right"> 
+												<div class="dropdown">
+												  <a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-arrows-ccw"></i></a>
+												  <ul class="pull-right dropdown-menu">
+													<li><a href="#">Efika Parametros</a></li>
+													<li><a href="#">Autenticação Wise</a></li>
+												  </ul>
+												</div>
+											</div>
+											<div style="" class="panel-options pull-right"> 
+												<div class="dropdown">
+												  <a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-chart-bar"></i></a>
+												  <ul class="pull-right dropdown-menu">
+													<li><a href="#">Tabela SNR ATN Distancia</a></li>
+												  </ul>
+												</div>
+											</div>
+											
+										</th>
+										<th width="50%">WiseTool
+											<div style="" class="panel-options pull-right"> 
+												<div class="dropdown">
+												  <a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-arrows-ccw"></i></a>
+												  <ul class="pull-right dropdown-menu">
+													<li><a id="diagnosticoWise" href="#">WiseTool Cadastro (recarregar)</a></li>
+													<li><a id="wiseDistancia" href="#">WiseTool Distancia (recarregar)</a></li>
+													<li><a id="abreWiseProvisioning" href="#">Provisioning</a></li>
+												  </ul>
+												</div>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td id="diagnostico_parametros">
+											<div id="diagnostico_parametrosc" class="ui-datalist-content ui-widget-content">
+											<br><br>
+											<!--
+												Plano:	<span class="negrito azul">25600 / 2048</span>  <br>
+												Vel. sincronia:	<span class="negrito vermelho">24100 / 2596</span><br>
+												Sinal Ruído (dB)	<span class="negrito verde">16 / 21</span><br>
+												Atenuação (dB)	<span class="negrito verde">17 / 5</span><br>
+												<div class="divisorDiagnostico">Autenticação:</div>
+												Status: <span class="negrito vermelho">STOP </span><br> 
+												Data:<span class="negrito vermelho">2016-08-07 12:53:47</span><br>
+												-->
+											</div>
+										</td>
+										<td id="diagnostico_Wise">
+											<div id="diagnosticoWisec" class="ui-datalist-content ui-widget-content">
+										<br><br>
+										<!--
+											Armário: 	<span class="negrito verde">GOGNA_O1B03</span><br>
+											Distancia TPA: <span class="negrito azul">602 metros</span><br>
+											Modelo DSLAM:	KEYMILE - SUVD11<br>
+											Ender. Seq. da Porta:	<span class="negrito verde">1328</span><br>
+											Slot:<span class="negrito verde">15</span> , RIN: <span class="negrito verde">223</span> , Shelf:	<span class="negrito verde">5</span><br>
+											BRAS:	<span class="negrito verde">gna1b:10.161.88.39 - gna1a:10.161.88.250</span><br>
+										-->
+											</div>
+										</td>
+									</tr>
+								</tbody>
+								
+							</table>
+						</div>
+					</div>
+				</div>
+					<div class="col-sm-6" style="display:none;">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Grouped Lists</div>
+								<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> <a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a> </div>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th width="50%">Simple</th>
+											<th>With Links</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="padding-lg">
+												<ul class="list-group">
+													<li class="list-group-item"> <span class="badge badge-primary">5</span> Cras justo odio
+													</li>
+													<li class="list-group-item"> <span class="badge badge-info">14</span> Dapibus ac facilisis in
+													</li>
+													<li class="list-group-item"> <span class="badge badge-danger">11</span> Morbi leo risus
+													</li>
+													<li class="list-group-item"> <span class="badge badge-success">3</span> Porta ac consectetur ac
+													</li>
+													<li class="list-group-item"> <span class="badge badge-warning">7</span> Vestibulum at eros
+													</li>
+												</ul>
+											</td>
+											<td class="padding-lg">
+												<div class="list-group">
+													<a href="#" class="list-group-item active"> <span class="badge badge-primary">5</span> Cras justo odio
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-info">14</span> Dapibus ac facilisis in
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-danger">11</span> Morbi leo risus
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-success">3</span> Porta ac consectetur ac
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-warning">7</span> Vestibulum at eros
+													</a>
+												</div>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Diagnostico de atendimento</div>
+								<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> <a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a> </div>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-condensed table-bordered table-hover table-striped">
+									<tbody>
+										<tr><td>Tecnico Checklist:</td><td><span class="label label-warning2">Sim</span></td></tr>
+										<tr><td>Cliente HeavyUser:</td><td><span class="label label-success">Nao</span></td></tr>
+										<tr><td>Massiva SAS:      </td><td><span class="label label-success">Nao</span></td></tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td width="50%"> <strong>Voz</strong> <br>
+...
+											</td>
+											<td> <strong>Banda</strong> <br>
+...
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td width="33%"> <strong>Donut Charts</strong> <br>
+...											</td>
+											<td width="33%"> <strong>Colored</strong> <br>
+...											</td>
+											<td width="33%"> <strong>Formatted</strong> <br>
+...											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td> <strong>Line Chart</strong> <br>
+...
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						
+						
+					</div>
+			</div>
+		</div>
+	<!-- Footer -->
+		<footer class="main">
+			
+			
+		
+		</footer>
+	</div>
+
+	
+	
+</div>
+
+
+	<!-- Modal 3 (Custom Width)-->
+	<div class="modal fade custom-width" id="modal-debug">
+		<div class="modal-dialog" style="width: 96%">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">DebugBox</h4>
+				</div>
+				
+				<div id="debugbox" class="modal-body">
+				
+					...
+					
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Modal 3 (Custom Width)-->
+	<div class="modal fade custom-width" id="modal-frame">
+		<div class="modal-dialog" style="width: 96%">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">VSMonitor ToolBox</h4>
+				</div>
+				
+				<div id="modalframe" class="modal-body" style="padding:2px;">
+					<table width="100%">
+						<tr>
+							<td width="150px" valign="top">
+							menu
+							</td>
+							<td>
+							<iframe name="toolFrame" style="width:100%;height:600px;" src="" frameborder="none" ></iframe>
+							</td>
+						</tr>
+					
+					</table>
+				</div>
+				<!--
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<div id="containerTemporario"></div>
+	<script src="painel.js"></script>
+	<!-- Bottom scripts (common) -->
+	<script src="assets/js/gsap/main-gsap.js"></script>
+	<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/joinable.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/neon-api.js"></script>
+
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/neon-custom.js"></script>
+
+
+	<!-- Demo Settings -->
+	<script src="assets/js/neon-demo.js"></script>
+
+</body>
+</html>

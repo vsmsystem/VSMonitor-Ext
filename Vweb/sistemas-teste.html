@@ -1,0 +1,387 @@
+<html>
+<head>
+<meta name="description" content="Ferramenta pensada pra ajudar o operador no dia a dia">
+<meta name="author" content="Valdecir Merli">
+<title>V+GPS</title>
+</title>
+<script>
+function firstFrame(){
+document.getElementById("first").style.display = "block";
+document.getElementById("second").style.display = "none";
+document.getElementById("btframe1").className = "scr_on";
+document.getElementById("btframe2").className = "scr_off";
+}
+function secondFrame(){
+document.getElementById("first").style.display = "none";
+document.getElementById("second").style.display = "block";
+document.getElementById("btframe1").className = "scr_off";
+document.getElementById("btframe2").className = "scr_on";
+}
+</script>
+<style>
+.altura{height:100%;}
+.largura{}
+
+.menu{float:left;width:160px;height:578px;border-right:solid 1px #000000;}
+.mon1{background:#00ff00 url("img/mon1.png");}
+.mon2{background:#00dd00 url("img/mon2.png");}
+.mon2b{background:#00dd00 url("img/mon2b.png");}
+.mon3{background:#dddddd url("img/mon3.png");}
+a:link {
+    text-decoration: none;color:#000000;
+	
+}
+
+a:visited {
+    text-decoration: none;color:#000000;
+	
+}
+
+a:hover {
+    text-decoration: none;color:#4d79ff;
+
+}
+
+a:active {
+    text-decoration: none;color:#000000;
+
+}
+
+.tmenu{width:200px;}
+.tmenu td {padding-left:5px;}
+.tmenu a {display:inline-block;margin:1px;width:16px;height:16px;border:none;}
+.smhide{color:#dddddd;}
+#tmain-a{width:200px;vertical-align:top;}
+#tmain-b{width:100%;vertical-align:top;}
+body{margin:0px;border:0px;}
+iframe{	border:none;width:100%;}
+a{border:none;text-decoration:none;}
+.scr_on{width:85px;background:#6699ff;}
+.scr_off{width:85px;background:#eeeeee;}
+
+* {font-size:10px;font-family:Lucida Grande,Arial,Helvetica,sans-serif;}
+</style>
+
+
+
+
+
+
+
+
+<body>
+<table class="altura" width="100%" cellspacing=0 cellpadding=0 >
+<tr>
+	<td id="tmain-a">
+		<table class="tmenu" border=0 cellspacing=0 cellpadding=0>
+		<tr style="background-color:#eeeeee;">
+			<td width="130px" ><strong>Sistemas</strong></td>	
+			<td width="50px"></td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="https://d-gvt.etadirect.com/457177773477/">
+			ETA
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="https://d-gvt.etadirect.com/457177773477/"></a>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td> <a class="mhref" target="_blank" href="http://transferapplet.gvt.com.br/Transfer/Transfer/Index.jsp" > 
+			GPS
+			</a>			<a class="smhide" target="first" href="http://transferapplet.gvt.com.br/Transfer/Transfer/Index.jsp"> +T </a></td>	
+			<td>
+				<a class="mon3" target="_blank" href="http://gpsco.gvt.net.br/gps/co/atendimento/">&nbsp; </a>
+				<a class="mon2" target="first" href="http://gpsco.gvt.net.br/gps/co/atendimento/">&nbsp; </a>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="http://appsagre.gvt.net.br/Manobraunica/Acesso?dado=usr" > 
+			Manobra Unica
+			</a></td>
+			<td>
+			<a class="mon3" target="_blank" href="http://appsagre.gvt.net.br/Manobraunica/Acesso?dado=usr"></a>
+			<a class="mon2" target="first" href="http://appsagre.gvt.net.br/Manobraunica/Acesso?dado=usr"></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="http://gvtapp/sas/configurar" > 
+			SAS
+			</a> 
+			<a style="color:#bbbbbb;" target="first" href="MSW.html"> MSW </a> /
+			<a style="color:#bbbbbb;" target="first" href="SAS2.html"> SAS2 </a>
+			<td>
+			<a class="mon3" target="_blank" href="http://gvtapp/sas/configurar"></a>
+			<a class="mon2" target="first" href="http://gvtapp/sas/configurar"></a>
+			</td>
+		</tr>
+
+		</td>
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			WiseTool
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="http://wisetool.gvt.net.br/wisetool/index.jsp"></a>
+			<a class="mon2" target="first" href="http://wisetool.gvt.net.br/wisetool/index.jsp"></a></td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			PnAdmin
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="http://pnadmin.gvt.com.br/pn/index.jsp"></a>
+			<a class="mon2" target="first" href="http://pnadmin.gvt.com.br/pn/index.jsp"></a>
+			</td>
+		</tr>
+
+		<tr style="background-color:#eeeeee;">
+			<td>&nbsp;<td/>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Manobra Massiva
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://manobramassiva.gvt.net.br/ManobraMassiva/init.do"></a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" >  
+			ACS 
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://10.200.6.150:8080/nbbs/login.ui"></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Portal IT
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://portalitatendimento.gvt.net.br/Portal_IT/Portal_IT.html"></a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" >  
+			Ficha Limpa 
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://svuxpopews14:8080/FichaLimpa"></a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" >  
+			SAS Portability 
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://gvtapp/sas/portability"></a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" >  
+			Choose a Target 
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://10.200.1.220/cricket/grapher.cgi?target=%2Fdslams"></a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Portal BPM
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="http://bpmportal.gvt.com.br/"></a>
+			<a class="mon2b" target="second" href="http://bpmportal.gvt.com.br/"></a>
+			</td>
+		</tr>
+		
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Siebel8
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="http://novosiebel.gvt.com.br/ecommunications_ptb/"></a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" >  
+			Activia 
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="https://activia.gvt.com.br/activia/jsp/login.jsp"></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" >  
+			PL Control
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="http://sv2kppag2/plcontrol"></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" >  
+			Efika
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="http://efika/web/"></a>
+			</td>
+		</tr>
+
+		<tr style="background-color:#eeeeee;">
+			<td>&nbsp;<td/>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Outlook Web
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="https://webmail.gvt.com.br"></a>
+			<a class="mon2" target="first" href="https://webmail.gvt.com.br"></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Intranet
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://intranetcorporativa.telefonica.br"></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Contatos
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://portalcolaboradores/IntranetCorporativa"></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			SAN
+			</a></td>	
+			<td><a class="mon3" target="_blank" href="http://portalsan.gvt.net.br/PortalSAN/"></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Total View
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="http://sv2kpwfm3/agent/"></a>
+			<a class="mon2" target="first" href="http://sv2kpwfm3/agent/"></a>
+			</td>
+		</tr>
+		
+		<tr style="background-color:#eeeeee;">
+			<td>&nbsp;<td/>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			IPs Nortel
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="http://efika/novosite/busca/material_radar.php?id_material=84"></a>
+			<a class="mon2" target="first" href="http://efika/novosite/busca/material_radar.php?id_material=84"></a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><a class="mhref" target="_blank" href="" > 
+			Duplo SAS
+			</a></td>	
+			<td>
+			<a class="mon3" target="_blank" href="SAS2.html"></a>
+			<a class="mon2" target="first" href="SAS2.html"></a>
+			</td>
+		</tr>
+		
+		<tr style="background-color:#eeeeee;">
+			<td>&nbsp;<td/>
+		</tr>
+		<tr style="background-color:#eeeeee;">
+			<td width="130px" ><strong>
+			TL - BPM
+			</a></strong></td>	
+			<td width="50px"></td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+			<button id="btframe1" type="button" class="scr_on" onclick="firstFrame();" >Tela 1</button>
+			<button id="btframe2" type="button" class="scr_off" onclick="secondFrame();" >Tela 2</button>
+			
+				<form style="margin:0px;padding:0px;display:inline;" method="get" target="second" action="http://bpmportal.gvt.com.br/PortalFederado_v1/home/myTasks.jsp">
+				<input style="width:105px;" onclick="secondFrame();" type=text placeholder="SS / SOSId da TL" id="SOSId" name="SOSId" >
+				<input style="display:inline;width:60px" type="submit" name="btnFiltrar" value="Filtrar" />
+				<input type="hidden" name="currPage" value="1" />
+				<input type="hidden" name="orderBy" value="" />
+				<input type="hidden" name="ascDesc" value="ASC" />
+				<input type="hidden" name="idConsulta" value="1" />
+				<input type="hidden" name="actionFiltro" value="" />
+				<input type="hidden" name="nomeFiltro" value="" />
+				<input type="hidden" name="appName" value="CensupArmSiteLotado" />
+				<input type="hidden" name="workstep" value="" />
+				<input type="hidden" name="atribDisp" value="D" />
+				<input type="hidden" name="prioridade" value="" />
+				<input type="hidden" name="ArmarioSite" value="" />
+				<input type="hidden" name="Bairro" value="" />
+				<input type="hidden" name="CaixaSetor" value="" />
+				<input type="hidden" name="Cidade" value="" />
+				<input type="hidden" name="DataAtribuicao" value="" />
+				<input type="hidden" name="Endereco" value="" />
+				<input type="hidden" name="Estado=" value="" />
+				<input type="hidden" name="Responsavel" value="" />
+				<input type="hidden" name="SLAProcessoTxt" value="" />
+				<input type="hidden" name="TempInt" value="" />
+				<input type="hidden" name="TipoBandaLarga" value="" />
+				<input type="hidden" name="cmbFiltro" value="" />
+							
+				
+				</form>
+				<form style="display:inline;" name="frm" action="http://bpmportal.gvt.com.br/PortalFederado_v1/login/login.jsp" method="post" target="second">
+<input style="width:50px;" type="text" name="userid" id="userid">
+<input style="width:50px;" type="password" name="passwd" id="idPasswd">
+<input style="width:60px;" type="submit" name="button" id="button" value="acessar">
+
+</form>
+<button type="button" onclick="window.open('http://bpmportal.gvt.com.br/PortalFederado_v1/login/logout.jsp','second');" style="width:170px;" >Resetar BPM</button>
+
+
+			</td>	
+
+		</tr>
+		
+	
+		<input type="hidden" name="<tr style="background-color:#eeeeee;">
+			<td>&nbsp;<td/>
+		</tr>
+
+
+
+		</table>
+	</td>
+	<td id="tmain-b">
+	
+	<iframe class="altura" frameborder="0" src="http://gpsco.gvt.net.br/gps/co/atendimento/" name="first" id="first"></iframe>
+	<iframe class="altura" frameborder="0" src="http://bpmportal.gvt.com.br/" name="second" id="second"></iframe>
+	</td>
+</tr>
+</table>
+</body>
+</html>

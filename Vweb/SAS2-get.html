@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta name="description" content="Ferramenta pensada pra ajudar o operador no dia a dia">
+<meta name="author" content="Valdecir Merli">
+<title>SAS-x2</title>
+<style>
+.altura{height:100%;}
+.largura{}
+
+.menu{float:left;width:160px;height:578px;border-right:solid 1px #000000;}
+.mon1{background:#00ff00 url("img/mon1.png");}
+.mon2{background:#00dd00 url("img/mon2.png");}
+.mon3{background:#dddddd url("img/mon3.png");}
+.tmenu{width:180px;}
+.tmenu td {padding-left:5px;}
+.tmenu a {display:inline-block;margin:1px;width:16px;height:16px;border:none;}
+.umenu{background:#eeeeee;}
+#tmain-a{width:50%;vertical-align:top;}
+#tmain-b{width:50%;vertical-align:top;}
+body{margin:0px;border:0px;}
+iframe{	border:none;width:100%;}
+a{border:none;text-decoration:none;}
+
+* {font-size:14px;font-family:Lucida Grande,Arial,Helvetica,sans-serif;}
+
+form{ margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; font-family: inherit } 
+</style>
+<script>
+function singleScreen(){
+document.getElementById("tmain-a").style.width = "100%";
+document.getElementById("tmain-b").style.width = "0%";
+}
+function doubleScreen(){
+document.getElementById("tmain-a").style.width = "50%";
+document.getElementById("tmain-b").style.width = "50%";
+}
+</script>
+<!-- 
+Resetar: <a href="http://gvtapp/sas/configurar" target="sasframe1">Esquerda</a> - <a href="http://gvtapp/sas/configurar" target="sasframe2">Direita</a>
+-->
+<body>
+<table cellspacing="0" cellpadding="0" width="100%" style="position:absolute;display:fixed;">
+<tr>
+	<td width="100%">  &nbsp; &nbsp;
+	<button style="" type="button" onclick="singleScreen();" > 1 Tela </button> &nbsp;  
+	<button style="" type="button" onclick="doubleScreen();" > 2 telas </button> 
+	<form target="sasframe1" action="http://gvtapp/sas/configurar" method="get" style="float:left;position:absolute;">
+<input type="text" name="telefoneDMS"><input type="submit" value="acessar" />
+<input type="hidden" name="cmd" value="consultar" >
+<input type="hidden" name="fecha" value="1" >
+</form>
+
+	<div style="position:absolute;float:left;left:50%;margin-left:-200px;">
+	<button style="" type="submit" onclick="window.open('http://gvtapp/sas/configurar','sasframe1');" style="width:200px;" >Resetar < 1</button>
+	<button name="subject" type="submit" onclick="window.open('http://gvtapp/sas/configurar','sasframe2'); " style="width:200px;" > Resetar > 2</button>
+	</div>
+	</td>
+</tr>
+<tr style="display:none;">
+	<td width="50%">  &nbsp; &nbsp;
+	<button style="" type="button" onclick="singleScreen();" > 1 Tela </button> &nbsp;  
+	<button style="" type="button" onclick="doubleScreen();" > 2 telas </button> 
+	<button style="" type="submit" onclick="window.open('http://gvtapp/sas/configurar','sasframe1');" style="width:200px;" >Resetar < 1</button>
+	</td>
+	<td width="50%">
+	<button name="subject" type="submit" onclick="window.open('http://gvtapp/sas/configurar','sasframe2'); " style="width:200px;" > Resetar > 2</button>
+	</td>
+</tr>
+</table>
+
+<table class="altura" width="100%" cellspacing=0 cellpadding=0 >
+<tr>
+	<td id="tmain-a">
+		<iframe name="sasframe1" class="altura" frameborder="0" src="http://gvtapp/sas/configurar" name=""></iframe></td>
+
+	</td>
+	<td id="tmain-b">
+		<iframe name="sasframe2" class="altura" frameborder="0" src="http://gvtapp/sas/configurar" name=""></iframe></td>
+</tr>
+</table>
+</body>
+</html>

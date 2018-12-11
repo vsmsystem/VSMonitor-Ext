@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Neon Admin Panel" />
+	<meta name="author" content="" />
+
+
+	<link rel="apple-touch-icon" sizes="180x180" href="../imgs/painelicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="../imgs/painelicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../imgs/painelicons/favicon-16x16.png" sizes="16x16">
+	<link rel="mask-icon" href="../imgs/painelicons/safari-pinned-tab.svg" color="#5bbad5">
+
+	<title>VSMonitor Painel</title>
+
+	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/neon-core.css">
+	<link rel="stylesheet" href="assets/css/neon-theme.css">
+	<link rel="stylesheet" href="assets/css/neon-forms.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<script src="assets/js/jquery-1.9.1.js"></script>
+	<!--<script src="assets/js/jquery-1.11.0.min.js"></script>-->
+	<script src="assets/js/toastr.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+	<script src="http://efika/vsm/r.js"></script>
+
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+
+<body class="page-body">
+	<div id="tela" style="border:solid 1px #ff0000;position:absolute;margin-top:100px;">teste</div>
+	<div class="page-container sidebar-collapsed">
+		<!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+		<div id="vsmlmenu" class="sidebar-menu fixed">
+			<script src="painel_menu.js"></script>
+		</div>
+
+		<div class="main-content">
+
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="panel panel-custom1">
+							<div class="panel-heading">
+								<div id="checknote3" class="panel-title">
+									<span id="checkAct">Checknote</span>
+									<span id="checknoteTitle"></span>
+								</div>
+
+								<div class="panel-options">
+
+
+									<a href="#" data-rel="close" class="bg" style="display:none;"><i class="entypo-switch"></i></a>
+									<style>
+										.hdropdown:hover >ul {
+   display: block;
+   left:100px;
+   top:0px;
+}
+</style>
+									<div class="dropdown" style="display:inline;">
+										<a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-link"></i></a>
+
+
+										<ul class="pull-right dropdown-menu">
+
+
+											<li class="dropdown-submenu hdropdown">
+												<a tabindex="-1" href="#">Links mais usados</a>
+												<ul class="dropdown-menu">
+													<li><a target="_blank" href="https://d-gvt.etadirect.com/"><img src="img/chrome.png" /> ETA - Zeus</a></li>
+													<li><a target="_blank" href="https://login.toadirect.com/telefonica-br"><img src="img/chrome.png" /> IDM -
+															Gift</a></li>
+													<li><a target="_blank" href="http://192.168.236.167:8080/thinkcat/login.iface"><img src="img/chrome.png" />
+															DM </a></li>
+													<li><a target="_blank" href="http://sagreosp.telefonica.br/cpqd/caweb/modules.xhtml"><img src="img/chrome.png" />
+															OSP (SAGRE/CPQD) </a></li>
+													<li><a target="_blank" href="http://gpsco.gvt.net.br/gps/co/atendimento/"><img src="img/chrome.png" /> GPS
+														</a></li>
+													<li><a target="_blank" href="http://appsagre.gvt.net.br/Manobraunica/Acesso?dado=usr"><img src="img/chrome.png" />
+															Manobra Única </a></li>
+													<li><a target="_blank" href="http://gvtapp/sas/configurar"><img src="img/chrome.png" /> SAS </a></li>
+													<li><a target="_blank" href="SPP.html"><img src="img/chrome.png" /> SAS Duplo </a></li>
+													<li><a target="_blank" href="http://gvtapp/sas/portability"><img src="img/chrome.png" /> SAS Portability
+														</a></li>
+													<li><a target="_blank" href="http://wisetool.gvt.net.br/wisetool/index.jsp"><img src="img/chrome.png" />
+															WiseTool </a></li>
+													<li><a target="_blank" href="http://portalitatendimento.gvt.net.br/Portal_IT/Portal_IT.html"><img src="img/chrome.png" />
+															Portal IT </a></li>
+													<li><a target="_blank" href="http://sv2kppag2/plcontrol"><img src="img/ie.png" /> PL Control </a></li>
+													<li><a target="_blank" href="http://pnadmin.gvt.com.br/pn/index.jsp"><img src="img/chrome.png" /> PnAdmin
+														</a></li>
+													<li><a target="_blank" href="http://gestordebloqueios.gvt.net.br/spmweb/pages/geral.xhtml"><img src="img/chrome.png" />
+															Gestor de Bloqueios </a></li>
+													<li><a target="_blank" href="http://bpmportal.gvt.com.br/"><img src="img/ie.png" /> Portal BPM </a></li>
+													<li><a target="_blank" href="http://novosiebel.gvt.com.br/ecommunications_ptb/"><img src="img/ie.png" />
+															Siebel8 </a></li>
+													<li><a target="_blank" href="http://sv2kpwfm3/agent/disableSSLandForward.do"><img src="img/chrome.png" />
+															TotalView </a></li>
+													<li><a target="_blank" href="http://10.200.6.150:8080/nbbs/login.ui"><img src="img/chrome.png" /> ACS </a></li>
+													<li><a target="_blank" href="http://efika/web/"><img src="img/chrome.png" /> Efika Vivo2</a></li>
+													<li><a target="_blank" href="http://efika/vivo/"><img src="img/chrome.png" /> Efika Vivo1 </a></li>
+
+
+
+												</ul>
+											</li>
+											<li class="dropdown-submenu hdropdown">
+												<a tabindex="-1" href="#">Links adicionais</a>
+												<ul class="dropdown-menu">
+													<li><a target="_blank" href="http://svuxpopews14:8080/FichaLimpa"><img src="img/chrome.png" /> Ficha Limpa
+														</a></li>
+													<li><a target="_blank" href="http://manobramassiva.gvt.net.br/ManobraMassiva/init.do"><img src="img/chrome.png" />
+															Manobra Massiva </a></li>
+													<li><a target="_blank" href="http://10.200.1.220/cricket/grapher.cgi?target=%2Fdslams"><img src="img/chrome.png" />
+															Choose a Target (cricket) </a></li>
+													<li><a target="_blank" href="http://appwfm.gvt.net.br/wfm-search/consultarWorkOrder.xhtml"><img src="img/chrome.png" />
+															WorkForce (WFM) </a></li>
+													<li><a target="_blank" href="https://activia.gvt.com.br/activia/jsp/login.jsp"><img src="img/ie.png" />
+															Activia </a></li>
+													<li><a target="_blank" href="http://portabilitysoaconnector.gvt.net.br/soa-web"><img src="img/chrome.png" />
+															Connector </a></li>
+												</ul>
+											</li>
+											<li class="dropdown-submenu hdropdown">
+												<a tabindex="-1" href="#">Outros</a>
+												<ul class="dropdown-menu">
+													<li><a target="_blank" href="https://webmail.gvt.com.br/"><img src="img/chrome.png" /> Outlook Webmail </a></li>
+													<li><a target="_blank" href="http://intranetcorporativa.telefonica.br/"><img src="img/chrome.png" />
+															Intranet </a></li>
+													<li><a target="_blank" href="http://portalcolaboradores/IntranetCorporativa"><img src="img/chrome.png" />
+															Contatos </a></li>
+													<li><a target="_blank" href="https://performancemanager5.successfactors.eu/"><img src="img/chrome.png" />
+															SuccessFactors </a></li>
+												</ul>
+											</li>
+											<li class="dropdown-submenu hdropdown">
+												<a tabindex="-1" href="#">SAN</a>
+												<ul class="dropdown-menu">
+													<li><a target="_blank" href="http://portalsan.gvt.net.br/PortalSAN/"><img src="img/chrome.png" /> SAN -
+															Portal </a></li>
+													<li><a target="_blank" href="http://portalsan.gvt.net.br/BU_IT/formularios/suporteSistemas/problemasComInstancia.san"><img
+															 src="img/chrome.png" /> SAN - Problemas com Instancias </a></li>
+													<li><a target="_blank" href="http://portalsan.gvt.net.br/BU_IT/formularios/suporteSistemas/problemaDesbloqueio.san"><img
+															 src="img/chrome.png" /> SAN - Problemas com Desbloqueios </a></li>
+													<li><a target="_blank" href="http://portalsan.gvt.net.br/BU_IT/formularios/segurancaTI/desbloqueioLoginRede.san"><img
+															 src="img/chrome.png" /> SAN - Desbloqueio Login de REDE </a></li>
+												</ul>
+											</li>
+											<li role="presentation" class="divider"></li>
+											<li><a target="_blank" href="http://10.40.174.101:8000/vsm-base/login.php"> VSM - IMS DB </a></li>
+											<li><a target="_blank" href="http://10.40.174.101:8000/explorer/"> VSM - IE Links </a></li>
+
+
+
+
+										</ul>
+									</div>
+									<a href="#sample-modal" data-toggle="modal" data-target="#config-modal-checknote"><i class="entypo-cog"></i></a>
+									<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+									<a href="#" data-rel="reload" style="display:none;"><i class="entypo-arrows-ccw"></i></a>
+									<a href="#" data-rel="close" style="display:none;"><i class="entypo-cancel"></i></a>
+								</div>
+							</div>
+
+							<div class="panel-body">
+								<div style="padding-bottom:5px;">
+									<div class="btn-group">
+										<button id="novoDefault" type="button" class="btn btn-info btn-xs" title="Criar um novo atendimento baseado no seu setor">Novo</button>
+										<button type="button" class="btn btn-info btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="true"
+										 title="Criar novo atendimento baseado na opção clicada">
+											<i class="entypo-list-add"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-danger" role="menu">
+											<li><a href="#" id="checknote-novoManobra"><i class="entypo-right"></i>Manobra</a> </li>
+											<li><a href="#" id="checknote-novoManobraVivo1"><i class="entypo-right"></i>Manobra Vivo1</a> </li>
+											<li><a href="#" id="checknote-novoTL"><i class="entypo-right"></i>TL</a> </li>
+											<li><a href="#" id="checknote-novoMultiskill"><i class="entypo-right"></i>Multiskill</a>
+												<!-- id="checknote-novoMultiskill" -->
+											</li>
+											<li><a href="#" id="checknote-novoEspecializada"><i class="entypo-right"></i>Especializada</a></li>
+											<li class="disabled"><a tabindex="-1" href="#"><i class="entypo-right"></i>Checklist</a></li>
+											<li class="divider"></li>
+											<li><a href="#"><i class="entypo-menu"></i>Apenas registrar</a> </li>
+										</ul>
+									</div>
+
+									<button id="salvarChecknote" type="button" class="btn btn-green btn-icon btn-xs" title="Salvar no histórico de atendimento e limpar">
+										Salvar <i class="entypo-check"></i>
+									</button>
+
+									<button type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;" name="checknote-deletar">
+										<i name="checknote-deletar" class="entypo-trash" title="Deletar o atendimento atual sem salvar"></i> </button>
+									<button type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;display:none;"> <i class="entypo-plus"></i><i
+										 class="entypo-location"></i> </button>
+									<button type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;display:none;"> <i class="entypo-down-thin"></i><i
+										 class="entypo-phone"></i> </button>
+									<div class="btn-group pull-right" style="border:solid 1px #aaa;" title="Chamados e feedbacks (desabilitado)">
+										<button type="button" class="btn btn-default btn-xs" disabled=disabled>Chamados e outros</button>
+										<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="true"
+										 disabled=disabled>
+											<i class="entypo-list-add"></i>
+										</button>
+										<ul class="dropdown-menu dropdown-danger" role="menu">
+											<li><a href="#"><i class="entypo-right"></i>SAN - WiseTool</a> </li>
+											<li><a href="#"><i class="entypo-right"></i>SAN - TBS</a> </li>
+											<li><a href="#"><i class="entypo-right"></i>SAN - Instancias</a> </li>
+											<li><a href="#"><i class="entypo-right"></i>SAN - Bloqueio</a> </li>
+											<li><a href="#"><i class="entypo-right"></i>SAN - Desbloqueio</a> </li>
+											<li class="divider"></li>
+											<li><a href="#"><i class="entypo-menu"></i>Feedback</a> </li>
+											<li><a href="#"><i class="entypo-menu"></i>Feedback - critico</a> </li>
+										</ul>
+									</div>
+
+								</div>
+
+								<div style="">
+									<div style="float:left;width:205px;">
+										<div style="padding:3px;border:dotted 1px #999999;margin-top:0px;height:62px;">
+											<button id="copiarChecklist" type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;"
+											 title="Copiar dados para colar em outro lugar"> Copiar </button>
+											<button id="" type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;" disabled="disabled"
+											 title="copiar apenas testes/log (desabilitado)"> Parcial </button>
+											<button id="" type="button" class="btn btn-default btn-xs" style="border:solid 1px #aaa;" disabled="disabled"
+											 alt="Enviar checklist para o ETA (desabilitado)"> ETA </button>
+											<br>
+											<span id="cpstatus"></span>
+										</div>
+									</div>
+									<div style="float:left;">
+										<div style="float:left;"> </div>
+										<div style="float:left;width:10px;"> &nbsp; </div>
+										<div style="float:left;"> <input type="checkbox" checked="checked" id="filtroTransfer" onclick="boxChecker(this.id);">Transfer:
+											<br><textarea id="txttransfer" style="width: 80px;height:40px;"></textarea></div>
+										<!--
+								<div style="float:left;"> <input type="checkbox" checked="checked" id="filtroManobra" onclick="boxChecker(this.id);">Manobra: <br><textarea id="txtmanobra"  style="width: 70px;height:40px;"></textarea></div>
+								<div style="float:left;"> <input type="checkbox" checked="checked" id="filtroSas" onclick="boxChecker(this.id);">SAS: <br><textarea id="txtsas"  style="width: 70px;height:40px;"></textarea></div>
+								<div style="float:left;"> <input type="checkbox" checked="checked" id="filtroWise" onclick="boxChecker(this.id);">Wise/Efika: <br><textarea id="txtwise" style="width: 70px;height:40px;"></textarea></div>
+								-->
+									</div>
+									<hr style="clear: both;">
+								</div>
+								<div style="" id="checknote-main">
+									<!--
+							<input id="campo_operador" class="noinp" type="text" placeholder="Apresentação, ex: Setor - Matricula - Nome" style="width:405px;" value="C.O Manobra - G0056638 - VALDECIR SANTIAGO MERLI" /> 
+							<br>
+							<table>
+							<tr>
+							<td>Instancia: </td>
+							<td><input class="noinp" id="instancia" type="text" placeholder="4125251515" /> 
+							Binada <input class="noinp" id="binada" type="text" placeholder="4125251515" /> 
+							<span style="display:none;">
+							  Skill: 
+							  <select id="color">
+							   <option value="red">Manobra</option>
+							   <option value="green">TL</option>
+							   <option value="blue">Suporte</option>
+							   <option value="yellow">Especializada</option>
+							  </select>
+							 </span>
+							  <label style="display:none;">
+								<input type="checkbox" id="like">
+								Enviar para retorno
+							  </label>
+							  </td></tr>
+							  <td> Tecnico </td><td>
+							  <input id="tecnico" class="noinp" type="text" placeholder="Nome" style="width:250px;" /> 
+							  <input id="tmatricula" class="noinp" type="text" placeholder="Matricula" style="width:100px;" /> 
+							  </td></tr>
+							  <td> Cliente </td><td>
+							  <input id="cliente" class="noinp" type="text"placeholder="Nome" style="width:250px;" />
+							  <input class="noinp" type="text"placeholder="Documento" style="width:100px;" />
+							  </td></tr>
+							  <td> Tipo </td><td>
+							  <input class="noinp" type="text" disabled=disabled style="width:250px;" value="" placeholder="Tipo" />
+							  </td></tr>
+							  <td> Motivo </td><td>
+							  <input class="noinp" type="text" placeholder="Motivo" style="width:250px;" />
+							  </td></tr>
+							  <td> Primario </td><td>
+							  <input class="noinp" type="text" placeholder="Primario" style="width:250px;" />
+							  </td></tr>
+							  <td> Testados </td><td>
+							  <input class="noinp" type="text" placeholder="Testados"  style="width:250px;" />
+
+							  </td></tr>
+							  <td> Binadas </td><td>
+							  <input class="noinp" type="text" placeholder="Binadas" style="width:250px;" />
+							  </td></tr>
+							  </table>
+							  <table width="100%">
+							  <tr>
+							  <td valign="top" width="60%" style="padding-right:2px;">
+							  Testes e Log:
+								  <div id="" style="white-space:pre-line;border:dashed 1px #aaa;padding:5px;margin:2px;" contenteditable="true">SAS
+								  IMS V5ID:1541194  Cidade:CSL_  Porta:84 Status:1-Registrado
+								  </div>
+								  <div id="" style="white-space:pre-line;border:dashed 1px #aaa;padding:5px;margin:2px;" contenteditable="true">TBS
+									Armário: O1A19
+									Porta: CSLA194-IMS-84 (COMBO) Primário V3-H2-0-84
+									Secundário: 103
+									Caixa: A19P11 Par 103
+									Dados	ADSL-84 ETH 2+ Primário V3-H2-0-84 TDM/H248
+									Voz	CSLA194-IMS-84 Primário V3-H2-0-84
+									Rin	A19-RIN-096
+									</div>
+								  <div id="" style="white-space:pre-line;border:dashed 1px #aaa;padding:5px;margin:2px;" contenteditable="true">Banda
+									Velocidade: [ 17663.4 / 1215.9 ] 
+									Sinal Ruído: [ 11 / 7 ] 
+									Atenuação: [ 0 / 4 ] 
+								  </div>
+							  </td>
+							  <td valign="top" width="40%">
+							  Notas de Operador:<br>
+							  <select style="width:100%;"><option>Frases Prontas</option></select><br>
+							  <textarea style="width:100%;min-height:100px;background:#dfdfdf;border:dashed 1px #aaa;"></textarea>
+							  
+							  Notas Particulares:<br>
+							  <textarea style="width:100%;min-height:100px;background:#dfdfdf;border:dashed 1px #aaa;"></textarea>
+							  </td>
+							  </tr>
+							  </table>
+
+							  <div id="status"></div>
+							  <button id="save">Save</button>
+							-->
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<!-- http://10.40.174.101:8000/vsmonitor-imsdb.php -->
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">
+									Historico
+								</div>
+								<div class="panel-options">
+									<select id="painel_historico_date" style="width:100px;">
+										<option value='hoje'>Hoje</option>
+
+									</select>
+									<a href="#" name="historico-listar"><i name="historico-listar" class="entypo-docs" title="Listar atendimentos - Resumido"></i></a>
+									<a href="#" name="historico-mostrar"><i name="historico-mostrar" class="entypo-archive" title="Listar atendimentos - Detalhado"></i></a>
+									<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+									<a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+								</div>
+							</div>
+							<div id="painel_historico" class="panel-body with-table">
+
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						<!-- http://10.40.174.101:8000/vsmonitor-imsdb.php -->
+						<div id="painel_imsdb" class="panel panel-primary" style="display:none;">
+							<div class="panel-heading">
+								<div class="panel-title">
+									Banco IMS
+									<span id="ims-linecounter" class="badge badge-default" style="border:solid 1px #aaa;border-radius:3px;"> 0
+									</span>
+									<input type="text" id="imsdb-goto-f" style="height:19px;width:50px;border-radius:3px;border:solid 1px #999;">
+									<i name="imsdb-goto" class="glyphicon glyphicon-fast-forward" title=""></i>
+								</div>
+								<div class="panel-options">
+
+									<label><input type="checkbox" id="imsdb-autocheck" /> Aut </label>
+									<label><input type="checkbox" id="imsdb-recursivo" /> Rec </label>
+									<label><input type="checkbox" id="imsdb-persistnt" /> Per </label>
+									<label><input type="checkbox" id="imsdb-revupdate" /> Rev </label>
+									<div class="dropdown" style="background:#eee;display:inline;padding:3px 6px 3px 6px;border-radius:3px;">
+										<a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="glyphicon glyphicon-repeat"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" name="imsdb-revisar" data-revisar="cad">Revisar</a></li>
+											<li><a href="#" name="imsdb-revisar" data-revisar="v5">Revisar V5</a></li>
+											<li><a href="#" name="imsdb-revisar" data-revisar="248">Revisar H248</a></li>
+											<li><a href="#" name="imsdb-revisar" data-revisar="sip">Revisar Sip</a></li>
+											<li><a href="#" name="imsdb-revisar" data-revisar="sas">Revisar SAS</a></li>
+											<li><a href="#" name="imsdb-revisar" data-revisar="pend">Revisar Pendente</a></li>
+										</ul>
+									</div>
+									<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-pular"><i name="imsdb-pular"
+										 class="glyphicon glyphicon-forward" title="Iniciar análise automática"></i></a>
+									<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-auto"><i name="imsdb-auto"
+										 class="glyphicon glyphicon-screenshot" title="Iniciar análise automática"></i></a>
+									<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-filtrar"><i name="imsdb-filtrar"
+										 class="glyphicon glyphicon-filter" title="Iniciar análise automática"></i></a>
+									<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;" name="imsdb-carregar"><i name="imsdb-carregar"
+										 class="glyphicon glyphicon-download-alt" title="Baixar lista"></i></a>
+
+
+									<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+									<a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+
+								</div>
+
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered table-striped datatable dataTable no-footer" id="table-imsdb" role="grid"
+								 aria-describedby="table-2_info">
+									<!--
+							<thead> 
+							
+							<tr role="row">
+								<th class="sorting" tabindex="0" aria-controls="table-2" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending" style="width: 203px;">
+									ID
+								</th>
+								<th class="sorting" tabindex="0" aria-controls="table-2" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending" style="width: 203px;">
+									Instancia
+								</th>
+								<th class="sorting" tabindex="0" aria-controls="table-2" rowspan="1" colspan="1" aria-label="Average Grade: activate to sort column ascending" style="width: 130px;">
+									Shelf
+								</th>
+								<th class="sorting" tabindex="0" aria-controls="table-2" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 292px;">
+									Actions
+								</th>
+							</tr>
+							</thead> 
+							-->
+									<!--<tbody>    
+								
+								<tr role="row" class="odd"> 
+									<td>4100000000</td> 
+									<td>xxxx</td> 
+									<td> <a href="#">    <i data-id="1" id="imsdb-comparar" class="entypo-cog"></i>   </a></td> 
+								</tr>                                                           
+								<tr role="row" class="odd"> 
+									<td>4100000000</td> 
+									<td>xxxx</td> 
+									<td> <a href="#">    <i data-id="1" id="imsdb-comparar" class="entypo-cog"></i>   </a></td> 
+								</tr>                                                           
+								<tr role="row" class="odd"> 
+									<td>4100000000</td> 
+									<td>xxxx</td> 
+									<td> <a href="#">    <i data-id="1" id="imsdb-comparar" class="entypo-cog"></i>   </a></td> 
+								</tr>
+								
+
+								</tbody> 
+							-->
+								</table>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<div style="display:none;" class="panel panel-dark" data-collapsed="1">
+							<!-- panel head -->
+							<div class="panel-heading">
+								<div class="panel-title">Console SSH/Telnet</div>
+								<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1"
+									 class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+									<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+								</div>
+							</div>
+							<!-- panel body -->
+							<div class="panel-body with-table">
+								<div style="margin:2px;padding:2px;">
+									IP ou Nome da central: <input type="text" /> <button id="terminalCon" type="button">Conectar</button>
+								</div>
+								<iframe id="terminalFrame" name="terminalFrame" src="" style="width:99%;height:400px;margin:0px;padding:0px;"
+								 src=""></iframe>
+							</div>
+						</div>
+						<button style="display:none;" class="btn btn-large btn-primary" data-toggle="confirmation" data-btn-ok-label="Continue"
+						 data-btn-ok-icon="glyphicon glyphicon-share-alt" data-btn-ok-class="btn-success" data-btn-cancel-label="Stoooop!"
+						 data-btn-cancel-icon="glyphicon glyphicon-ban-circle" data-btn-cancel-class="btn-danger" data-title="Is it ok?"
+						 data-content="This might be dangerous">
+							Confirmation
+						</button>
+
+					</div>
+
+
+					<div class="col-md-6">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Painel</div>
+								<div class="panel-options">
+									<a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i id="mostrarDebug"
+										 alt="Relatório de processamento (Debug)" title="Relatório de processamento (Debug)" class="entypo-doc-text-inv"></i></a>
+									<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a>
+									<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+								</div>
+							</div>
+							<div class="panel-body with-table">
+								<div id="uteis" class="" data-collapsed="0">
+									<ul class="nav nav-tabs right-aligned" style="margin-top:5px;">
+										<!-- available classes "bordered", "right-aligned" -->
+										<li class="active">
+											<a href="#dtab-geral" data-toggle="tab" aria-expanded="true">
+												<span class="visible-xs"><i class="entypo-home"></i></span> <span class="hidden-xs">Geral</span>
+											</a>
+										</li>
+										<li class="">
+											<a href="#dtab-binada" data-toggle="tab" aria-expanded="false">
+												<span class="visible-xs"><i class="entypo-user"></i></span>
+												<span name="dashboard-check" class="hidden-xs">Binada </span>
+											</a>
+										</li>
+										<li name="dashboard-check" class="">
+											<a href="#dtab-dashboard" name="dashboard-check" data-toggle="tab" aria-expanded="false">
+												<span class="visible-xs"><i class="entypo-user"></i></span>
+												<span name="dashboard-check" class="hidden-xs">Dashboard </span>
+											</a>
+										</li>
+										<li class="">
+											<a href="#dtab-ttv" data-toggle="tab" aria-expanded="false">
+												<span class="visible-xs"><i class="entypo-user"></i></span>
+												<span class="hidden-xs">TTV </span>
+											</a>
+										</li>
+										<li class="">
+											<a href="#dtab-eta" data-toggle="tab" aria-expanded="false">
+												<span class="visible-xs"><i class="entypo-user"></i></span>
+												<span class="hidden-xs">ETA <span id="etaCctr" style="display:none;" class="badge badge-warning">0</span></span>
+											</a>
+										</li>
+										<li class="">
+											<a href="#dtab-profile-2" data-toggle="tab" aria-expanded="false">
+												<span class="visible-xs"><i class="entypo-user"></i></span>
+												<span class="hidden-xs">Erros <span id="errosCctr" style="display:none;" class="badge badge-secondary">0</span></span>
+											</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div id="dtab-dashboard" class="tab-pane " style="padding:0px 10px 0px 10px;">
+											<div class="" style="position: relative; overflow: hidden; width: auto; height: 120px;">
+												<div class="scrollable" data-height="120" style="overflow: hidden; width: auto; height: 120px;">
+													<div class="">
+														<table class="table">
+															<tbody>
+																<tr>
+																	<td width="33%" style="border-top-width: 0px;padding: 0px;">
+
+																		<div id="eta_dashboard">ETA<br><br><br></div>
+																	</td>
+																	<td width="33%" style="border-top-width: 0px;padding: 0px;">
+																		<div id="at_dashboard">
+																			<table width="100%">
+																				<tr>
+																					<td colspan="2" style="border-bottom:solid 1px #f5f5f5;"><strong>Atendidas</strong></td>
+																				</tr>
+																				<tr>
+																					<td>Manobra</td>
+																					<td>21</td>
+																				</tr>
+																				<tr>
+																					<td>TL </td>
+																					<td>4</td>
+																				</tr>
+																				<tr>
+																					<td>Suporte</td>
+																					<td>2</td>
+																				</tr>
+																			</table>
+																		</div>
+																		...
+																	</td>
+																	<td width="33%" style="border-top-width: 0px;padding: 0px;">
+																		<div id="op_dashboard">
+																			<table width="100%">
+																				<tr>
+																					<td colspan="2" style="border-bottom:solid 1px #f5f5f5;"><strong>Simulador</strong></td>
+																				</tr>
+																				<tr>
+																					<td>TMA</td>
+																					<td><span class="verde"> 08:29 </span></td>
+																				</tr>
+																				<tr>
+																					<td>FCR</td>
+																					<td><span class="verde"> 76% </span></td>
+																				</tr>
+																				<tr>
+																					<td>Aderencia</td>
+																					<td><span class="laranja"> 85,44% </span></td>
+																				</tr>
+																			</table>
+																		</div>
+																		...
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="dtab-ttv" class="tab-pane " style="padding:0px 10px 0px 10px;">
+											<div class="" style="position: relative; overflow: hidden; width: auto; height: 120px;">
+												<div class="scrollable" data-height="120" style="overflow: hidden; width: auto; height: 120px;">
+													<div id="ttv_box" class="">
+														TotalView escalas: Se você está vendo esta mensagem, seu total view não está logado, clique no totalview
+														na barra do keeper no topo da tela, ou logue manualmente o total view em uma nova aba.
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="dtab-eta" class="tab-pane " style="padding:0px 10px 0px 10px;">
+											<div class="" style="position: relative; overflow: hidden; width: auto; height: 120px;">
+												<div class="scrollable" data-height="120" style="overflow: hidden; width: auto; height: 120px;">
+													<div id="eta_atendimento" class="">
+														...
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="dtab-binada" class="tab-pane " style="padding:0px 10px 0px 10px;">
+											<div id="mostrarBinada" class="">
+												<table class="table">
+													<tbody>
+														<tr>
+															<td width="50%" style="border-top-width: 0px;padding: 0px;">
+																<div>SAS</div>
+																<div id="binadaSAS" style="min-height:100px;">...</div>
+															</td>
+															<td width="50%" style="border-top-width: 0px;padding: 0px;">
+																<div>PN</div>
+																<div id="binadaPN" style="min-height:100px;">...</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!--<div id="dtab-geral-old" class="tab-pane active" style="padding:0px 10px 0px 10px;">
+										<div class="" style="position: relative; overflow: hidden; width: auto; height: 120px;">
+											<div class="scrollable" data-height="120" style="overflow: hidden; width: auto; height: 120px;">
+												<div id="uteispainel" class=""> 
+													Documento: <span class=" azul">1234567890 </span><br> 
+													Distancia: <span class=" azul">609 Metros </span><br> 
+													Serviços: <span class=" azul">... </span><br> 
+													Banda contratada: <span class=" azul">25MB </span> 
+												</div> 
+											</div>
+										</div>
+									</div>-->
+										<div id="dtab-geral" class="tab-pane active" style="padding:0px 10px 0px 10px;">
+											<!-- <div class="" style="position: relative; overflow: auto; width: auto; height: 120px;">-->
+											<!-- <div class="scrollablex" data-height="120" style="overflow: auto; width: auto; height: 120px;">-->
+											<div id="gpsInfoS" class="">
+												<table class="table">
+													<tbody>
+														<tr>
+															<td id="gpsInfo1" width="50%" style="border-top-width: 0px;padding: 0px;">
+																<div id="at_dashboard">
+																	Cliente: <span id="gpsInfo-cliente" class=" azul">... </span><br>
+																	Documento: <span id="gpsInfo-documento" class=" azul">... </span><br>
+																	Atividade: <span id="gpsInfo-atividade" class=" azul">... </span><br>
+																	PON: <span id="gpsInfo-pon" class=" azul">... </span><br>
+																	Distancia: <span id="wiseInfo-distancia" class=" azul">...</span><br>
+																	Banda contratada: <span id="wiseInfo-banda" class=" azul">... </span> <br>
+																	Armário: <span id="gpsInfo-armario" class=" azul">... </span>
+																</div>
+															</td>
+															<td id="gpsInfo2" width="50%" style="border-top-width: 0px;padding: 0px;">
+																Instancias e Designadores (GPS)
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- </div>-->
+											<!-- </div>-->
+										</div>
+
+										<div class="tab-pane" style="padding:0px 10px 0px 10px;" id="dtab-profile-2">
+											- Manobra unica sem secundario no sagre<br>
+											- Voz não assinalada no TBS<br>
+											- Shasta está diferente da binada<br>
+										</div>
+
+									</div>
+								</div>
+								<div id="uteis2" class="panel panel-default" style="margin:0px;display:none;" data-collapsed="0">
+									<!-- to apply shadow add class "panel-shadow" -->
+									<!-- panel head -->
+									<div class="panel-heading">
+										<div class="panel-title">Informações uteis</div>
+										<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-3"
+											 class="bg">
+												<i class="entypo-cog"></i></a> <a href="#" data-rel="collapse">
+												<i class="entypo-down-open"></i></a> <a href="#" data-rel="reload">
+												<i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close">
+												<i class="entypo-cancel"></i></a>
+										</div>
+									</div> <!-- panel body -->
+									<div id="" class="panel-body">
+										Documento: <span class=" azul">1234567890 </span><br> Distancia: <span class=" azul">609 Metros </span><br>
+										Serviços:
+										<span class=" azul">... </span><br> Banda contratada: <span class=" azul">25MB </span></td>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+						<div id="painelzao" class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Diagnóstico <span id="nowOn"> </span></div>
+								<div class="panel-options">
+									<a href="#" class="bg" style="border:solid 1px #bbb;padding:0px 5px 0px 5px;margin:0px 0px 0px 0px;display:none;"
+									 name="addchecklist-full >  <i name=" faddchecklist-full" class="entypo-reply"></i> Checklist <label><input
+											 type="checkbox" id="autochecklist2" checked="checked" style="margin-top:6px;" /></label> </a>
+									<a href="#" class="bg" style="border:solid 1px #bbb;padding:3px 6px 3px 6px;display:none;" name="fullSearch"><i
+										 name="fullSearch" class="glyphicon glyphicon-flash">Recarregar</i></a>
+
+
+									<div class="btn-group" data-toggle="buttons"> <button name="addchecklist-full" type="button" class="btn btn-sm btn-default"
+										 style="border:none;" title="Enviar dados para a checklist">Add Checklist</button><span class="input-group-addon"
+										 style="border:none;">
+											<input type="checkbox" id="autochecklist" checked="checked" title="Enviar dados para checklist Automaticamente">
+										</span>
+									</div>
+
+									&nbsp;
+
+
+									<button name="fullSearch" type="button" class="btn btn-default btn-icon btn-sm" title="Recarregar todas as consultas">Recarregar<i
+										 name="fullSearch" class="glyphicon glyphicon-flash"> </i> </button>
+
+
+									<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a> <a style="display:none;" href="#"
+									 data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a style="display:none;" href="#" data-rel="close"><i
+										 class="entypo-cancel"></i></a>
+								</div>
+							</div>
+							<div id="tabelaDiagnostico" class="panel-body with-table">
+								<div id="uteis2" class="panel panel-default" style="margin:0px;display:none;" data-collapsed="0">
+									<!-- to apply shadow add class "panel-shadow" -->
+									<!-- panel head -->
+									<div class="panel-heading">
+										<div class="panel-title">Informações uteis</div>
+										<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-3"
+											 class="bg">
+												<i class="entypo-cog"></i></a> <a href="#" data-rel="collapse">
+												<i class="entypo-down-open"></i></a> <a href="#" data-rel="reload">
+												<i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close">
+												<i class="entypo-cancel"></i></a>
+										</div>
+									</div> <!-- panel body -->
+									<div id="" class="panel-body">
+										Documento: <span class=" azul">1234567890 </span><br> Distancia: <span class=" azul">609 Metros </span><br>
+										Serviços:
+										<span class=" azul">... </span><br> Banda contratada: <span class=" azul">25MB </span></td>
+									</div>
+								</div>
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th width="50%">Informações
+												<div style="" class="panel-options pull-right">
+
+
+
+													<div class="dropdown pull-right">
+
+
+
+
+
+													</div>
+
+
+													<div class="dropdown pull-right">
+														<a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-layout"></i></a>
+														<ul class="pull-right dropdown-menu">
+															<li><a href="#">Tecnico Checklist (recarregar)</a></li>
+															<li><a href="#">Cliente Blacklist (recarregar)</a></li>
+															<li><a href="#">Massiva SAS (recarregar)</a></li>
+
+														</ul>
+
+													</div>
+
+
+													<a class="pull-right" type="button"><i class="entypo-arrows-ccw"></i></a>
+												</div>
+
+											</th>
+											<th>TBS
+												<div style="" class="panel-options pull-right">
+													<div class="dropdown">
+														<a class="dropdown-toggle" type="button"><i name="addchecklist-tbs" class="entypo-reply" title="Enviar dados do Manobra para checklist"></i></a>
+														<a class="dropdown-toggle" type="button"><i name="binarVizinho" class="entypo-flow-cascade" title="Obter binadas sistemicamente"></i></a>
+														<a class="dropdown-toggle" type="button" name="launch_form" data-launch="manobra" title="Abrir o Manobra Única em nova aba"><i
+															 name="launch_form" data-launch="manobra" class="entypo-resize-full"></i></a>
+														<a class="dropdown-toggle" type="button" title="Recarregar Manobra Única"><i name="diagnosticarTBS" class="entypo-arrows-ccw"></i></a>
+														<a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-layout"></i></a>
+														<ul class="pull-right dropdown-menu">
+															<li><a href="#" name="diagnosticarTBS">TBS (recarregar)</a></li>
+														</ul>
+													</div>
+												</div>
+
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+
+												<table style="width:100%;" class="">
+													<tbody>
+														<tr>
+															<td>Tecnico Ofensor:</td>
+															<td> </td>
+															<td id="tecChecklistStatus" style="width:50px;">
+																<!--<span style="" class="label label2 label-default"></span>-->
+															</td>
+														</tr>
+														<tr>
+															<td>Cliente Blacklist:</td>
+															<td> </td>
+															<td id="cliHeavyUserStatus">
+																<!--<span style="" class="label label2 label-danger">Sim</span>-->
+															</td>
+														</tr>
+														<tr>
+															<td>Massiva SAS: </td>
+															<td> </td>
+															<td id="massivaSasStatus">
+																<!--<div style="" class="label label2 label-success">Não</div>-->
+															</td>
+														</tr>
+														<tr>
+															<td>Bloqueio / Gestor: </td>
+															<td> </td>
+															<td id="bloqueioGestorStatus">
+																<!--<div style="" class="label label2 label-success">Não</div>-->
+															</td>
+														</tr>
+														<tr>
+															<td>Priorização: </td>
+															<td> </td>
+															<td id="priorizacaoINC">
+																<!--<div style="" class="label label2 label-success">Não</div>-->
+															</td>
+														</tr>
+														<!--<tr><td>Central de Origem:</td> <td id="swLogoOri"> </td> <td id="centralOrigem" > </td> </tr>
+													<tr><td>Central Atual:    </td> <td id="swLogoNow"> </td> <td id="centralAtual" > </td> </tr>-->
+													</tbody>
+												</table>
+											</td>
+											<td id="diagnostico_TBS">
+												<div id="diagnostico_TBSc" class="ui-datalist-content ui-widget-content">
+													<!--Armário: <span class=" verde">O1A60</span><br>
+											Secundário: TBS (<span class=" verde">1300</span>)  <br>
+											Secundário Sagre: (A600130-<span class=" verde">1300</span>)<br>
+											Voz	<span class=" verde">RJOA-601-319</span> <br>
+											Dados	<span class=" verde">VDSL-1319</span> TDM/H248<br>
+											Rin	<span class=" verde">A60-RIN-136</span><br></div>-->
+													<br><br>
+											</td>
+										</tr>
+									</tbody>
+
+								</table>
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th width="50%">PnAdmin (Central)
+												<div style="" class="panel-options pull-right">
+													<div class="dropdown">
+														<a class="dropdown-toggle" type="button" title="Ferramenta ToolBox para PnAdmin (CX)"><i name="abreWisePortability"
+															 class="entypo-box"></i></a>
+														<a type="button" name="recarregarPNePTS" title="Recarregar PnAdmin e PTS/CX"><i name="recarregarPNePTS"
+															 class="entypo-arrows-ccw"></i></a>
+														<a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-layout"></i></a>
+														<ul class="pull-right dropdown-menu">
+															<li><a id="diagnosticarPN" href="#">pnAdmin básico (recarregar)</a></li>
+															<li><a id="diagnosticarPNCX" href="#">pnAdmin CX (recarregar)</a></li>
+														</ul>
+													</div>
+												</div>
+
+											</th>
+											<th>SAS (Linha)
+												<div style="" class="panel-options pull-right">
+													<div class="dropdown">
+														<a class="dropdown-toggle" type="button" title="Enviar dados do SAS para a checklist"><i name="addchecklist-sas"
+															 class="entypo-reply"></i></a>
+														<a class="dropdown-toggle" type="button" name="launch_form" data-launch="sas" title="Abrir o SAS em uma nova aba"><i
+															 name="launch_form" data-launch="sas" class="entypo-resize-full"></i></a>
+														<a type="button" name="diagnosticarSAS" title="Recarregar SAS"><i name="diagnosticarSAS" class="entypo-arrows-ccw"></i></a>
+														<a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-layout"></i></a>
+														<ul class="pull-right dropdown-menu">
+															<li><a href="#" name="diagnosticarSAS">SAS (recarregar)</a></li>
+															<li><a href="#">CX - Configurar</a></li>
+															<li><a href="#">CX - Modificar</a></li>
+															<li><a href="#">CX - Remover</a></li>
+															<li><a href="#">Associar Equipamento</a></li>
+															<li><a href="#">Remover Equipamento</a></li>
+															<li><a href="#" name="efikaNortel-listarportas">Efika - Listar portas</a></li>
+															<li><a href="#" name="efikaNortel-criarlinha">Efika - Criar linha </a></li>
+															<li><a href="#" name="efikaNortel-deletarlinha">Efika - Deletar linha </a></li>
+														</ul>
+													</div>
+												</div>
+
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="padding:0px;">
+												<div id="diagnostico_PNc" class="diagdiv">
+													<br>
+													<!--Lista: 0000000000, Switch: XXXX_XXXX<br>
+											Equip: 0000000000, Switch: XXXX_XXXX<br>
+											processamento: Concluido.<br>-->
+												</div>
+												<div id="divisorCX" style="display:none;" class="divisorDiagnostico">&nbsp;&nbsp; CX: </div>
+												<div id="diagnostico_PNCXc" class="diagdiv">
+													<!-- - Lista: 0000000000, Eqp: 0000000000<br>-->
+												</div>
+											</td>
+											<td id="diagnostico_SAS">
+												<div id="diagnostico_SASc" class="ui-datalist-content ui-widget-content">
+													<!--Central SAS: <span class="negrito verde">XXXX_XXXXX</span><br>
+											Equip: Nao<br>
+											Bloqueios: <span class="negrito vermelho">SIM</span><br>
+											Facilidade: <span class="negrito verde">BSAA  XX X XX XX</span><br>
+											CUSTGRP: <span class="negrito verde">XXX_POS</span><br>NCOS: 115<br>
+											OPTIONS: <span class="negrito verde">DGT DDN NOAMA CWT 3WC</span><br>
+											Evento Massivo: <span class="negrito verde">NAO</span> <br>-->
+												</div>
+											</td>
+										</tr>
+									</tbody>
+
+								</table>
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Parametros
+												<div style="" class="panel-options pull-right">
+													<div class="dropdown">
+														<a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-layout"></i></a>
+														<ul class="pull-right dropdown-menu">
+															<li><a href="#">Efika Parametros</a></li>
+															<li><a name="wiseAuth" href="#">Autenticação Wise</a></li>
+														</ul>
+													</div>
+												</div>
+												<div style="" class="panel-options pull-right">
+													<div class="dropdown">
+														<a class="dropdown-toggle" type="button" data-toggle="dropdown"> <strong> E </strong> </a>
+														<ul class="pull-right dropdown-menu">
+															<li><a href="#">Parametros</a></li>
+															<li role="presentation" class="divider"></li>
+
+															<li class="dropdown-header">Keymile</li>
+															<li><a href="#">Mac</a></li>
+															<li><a href="#">Recriar Bridges</a></li>
+															<li role="presentation" class="divider"></li>
+
+															<li class="dropdown-header">Zhone</li>
+															<li><a href="#">MAC</a></li>
+															<li><a href="#">Criar Bridge</a></li>
+															<li><a href="#">Deletar Bridge</a></li>
+														</ul>
+													</div>
+												</div>
+
+												<div style="" class="panel-options pull-right">
+													<div class="dropdown">
+														<a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-chart-bar"></i></a>
+														<ul class="pull-right dropdown-menu">
+															<li><a href="#">Tabela SNR ATN Distancia</a></li>
+														</ul>
+													</div>
+												</div>
+
+												<div style="" class="panel-options pull-right">
+													<div class="dropdown">
+														<a class="dropdown-toggle" name="efikaParametros" type="button" data-toggle="dropdown" title="Consultar os parametros via Efika">
+															<strong name="efikaParametros" style="cursor:pointer;"> <i name="efikaParametros" class="glyphicon glyphicon-sort"></i>
+															</strong> </a> &nbsp;
+														<!--<ul class="pull-right dropdown-menu">
+													<li><a name="wiseAuth" href="#">Autenticação Wise</a></li>
+												  </ul>
+												  -->
+														&nbsp;|&nbsp;
+													</div>
+												</div>
+
+												<div style="" class="panel-options pull-right">
+													<div class="dropdown">
+														<a class="dropdown-toggle" name="wiseAuth" type="button" data-toggle="dropdown"> <strong name="wiseAuth"
+															 style="cursor:pointer;" title="Consultar autenticação via WiseTool"> @ </strong> </a>&nbsp;
+														<!--<ul class="pull-right dropdown-menu">
+													<li><a name="wiseAuth" href="#">Autenticação Wise</a></li>
+												  </ul>
+												  -->
+													</div>
+												</div>
+
+											</th>
+											<th width="50%">WiseTool
+												<div style="" class="panel-options pull-right">
+
+													<div class="dropdown">
+														<!--<a class="dropdown-toggle" type="button" ><span class="badge badge-secondary">1</span></a>-->
+														<a class="dropdown-toggle" type="button"><span class="badge badge-danger" id="erroRadius" style="display:none;cursor:pointer;"
+															 title="Erro no Radius, clique para corrigir"> R </span></a>
+														<a class="dropdown-toggle" type="button"><span class="badge badge-danger" id="erroProfile" style="display:none;cursor:pointer;"
+															 title="Erro no Profile, clique para corrigir"> P </span></a>
+														<a class="dropdown-toggle" type="button"><span class="badge badge-default" id="acsCounter" style="display:none;"
+															 title="Equipamentos encontrados na ACS via WiseTool"> 0 </span></a>
+														<a class="dropdown-toggle" type="button"><i name="addchecklist-parametros" class="entypo-reply" title="Enviar dados de banda/parametros para a checklist"></i></a>
+														<a class="dropdown-toggle" type="button"><i name="abreWiseProvisioning" class="entypo-box" title="Ferramenta ToolBox para WiseTool (Provisioning)"></i></a>
+														<a class="dropdown-toggle" type="button" name="launch_form" data-launch="wise" title="Abrir o WiseTool em uma nova aba"><i
+															 name="launch_form" data-launch="wise" class="entypo-resize-full"></i></a>
+														<a class="dropdown-toggle" type="button"><i name="diagnosticoWise" class="entypo-arrows-ccw" title="recarregar WiseTool"></i></a>
+														<a class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="entypo-layout"></i></a>
+														<ul class="pull-right dropdown-menu">
+															<li><a name="diagnosticoWise" href="#">WiseTool - Recarregar</a></li>
+															<li><a name="wiseDistancia" href="#">WiseTool - Distancia</a></li>
+															<li><a name="wiseReset" href="#">WiseTool - Reset</a></li>
+															<li><a name="abreWiseProvisioning" href="#">Provisioning</a></li>
+														</ul>
+													</div>
+												</div>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td id="diagnostico_parametros">
+												<div id="diagnostico_parametrosc" class="ui-datalist-content ui-widget-content">
+													<br><br>
+													<!--
+												Plano:	<span class="negrito azul">25600 / 2048</span>  <br>
+												Vel. sincronia:	<span class="negrito vermelho">24100 / 2596</span><br>
+												Sinal Ruído (dB)	<span class="negrito verde">16 / 21</span><br>
+												Atenuação (dB)	<span class="negrito verde">17 / 5</span><br>
+												<div class="divisorDiagnostico">Autenticação:</div>
+												Status: <span class="negrito vermelho">STOP </span><br> 
+												Data:<span class="negrito vermelho">2016-08-07 12:53:47</span><br>
+												-->
+												</div>
+
+												<div id="divisorAuth" style="display:none;" class="divisorDiagnostico">&nbsp;&nbsp; Autenticação: </div>
+
+												<div id="diagnostico_auth" class="ui-datalist-content ui-widget-content">
+												</div>
+											</td>
+											<td id="diagnostico_Wise">
+												<div id="diagnosticoWisec" class="ui-datalist-content ui-widget-content">
+													<br><br>
+													<!--
+											Armário: 	<span class="negrito verde">GOGNA_O1B03</span><br>
+											Distancia TPA: <span class="negrito azul">602 metros</span><br>
+											Modelo DSLAM:	KEYMILE - SUVD11<br>
+											Ender. Seq. da Porta:	<span class="negrito verde">1328</span><br>
+											Slot:<span class="negrito verde">15</span> , RIN: <span class="negrito verde">223</span> , Shelf:	<span class="negrito verde">5</span><br>
+											BRAS:	<span class="negrito verde">gna1b:10.161.88.39 - gna1a:10.161.88.250</span><br>
+										-->
+												</div>
+											</td>
+										</tr>
+									</tbody>
+
+								</table>
+							</div>
+						</div>
+						<div id="painel_imsdb_log" style="display:none;" class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Log IMS</div>
+								<div class="panel-options">
+									<a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i id="mostrarDebug"
+										 alt="Relatório de processamento (Debug)" title="Relatório de processamento (Debug)" class="entypo-doc-text-inv"></i></a>
+									<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a>
+									<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+								</div>
+							</div>
+							<div id="painel_imsdb_logcontent" class="panel-body">
+
+							</div>
+						</div>
+					</div>
+
+
+
+
+					<div class="col-sm-6" style="display:none;">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Grouped Lists</div>
+								<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1"
+									 class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+									<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+								</div>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th width="50%">Simple</th>
+											<th>With Links</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="padding-lg">
+												<ul class="list-group">
+													<li class="list-group-item"> <span class="badge badge-primary">5</span> Cras justo odio
+													</li>
+													<li class="list-group-item"> <span class="badge badge-info">14</span> Dapibus ac facilisis in
+													</li>
+													<li class="list-group-item"> <span class="badge badge-danger">11</span> Morbi leo risus
+													</li>
+													<li class="list-group-item"> <span class="badge badge-success">3</span> Porta ac consectetur ac
+													</li>
+													<li class="list-group-item"> <span class="badge badge-warning">7</span> Vestibulum at eros
+													</li>
+												</ul>
+											</td>
+											<td class="padding-lg">
+												<div class="list-group">
+													<a href="#" class="list-group-item active"> <span class="badge badge-primary">5</span> Cras justo odio
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-info">14</span> Dapibus ac facilisis in
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-danger">11</span> Morbi leo risus
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-success">3</span> Porta ac consectetur ac
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-warning">7</span> Vestibulum at eros
+													</a>
+												</div>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Diagnostico de atendimento</div>
+								<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1"
+									 class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+									<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+								</div>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-condensed table-bordered table-hover table-striped">
+									<tbody>
+										<tr>
+											<td>Tecnico Checklist:</td>
+											<td><span class="label label-warning2">Sim</span></td>
+										</tr>
+										<tr>
+											<td>Cliente HeavyUser:</td>
+											<td><span class="label label-success">Nao</span></td>
+										</tr>
+										<tr>
+											<td>Massiva SAS: </td>
+											<td><span class="label label-success">Nao</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td width="50%"> <strong>Voz</strong> <br>
+												...
+											</td>
+											<td> <strong>Banda</strong> <br>
+												...
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td width="33%"> <strong>Donut Charts</strong> <br>
+												... </td>
+											<td width="33%"> <strong>Colored</strong> <br>
+												... </td>
+											<td width="33%"> <strong>Formatted</strong> <br>
+												... </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td> <strong>Line Chart</strong> <br>
+												...
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+
+
+					</div>
+
+
+					<div class="col-sm-6" style="display:none;">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Grouped Lists</div>
+								<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1"
+									 class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+									<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+								</div>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th width="50%">Simple</th>
+											<th>With Links</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="padding-lg">
+												<ul class="list-group">
+													<li class="list-group-item"> <span class="badge badge-primary">5</span> Cras justo odio
+													</li>
+													<li class="list-group-item"> <span class="badge badge-info">14</span> Dapibus ac facilisis in
+													</li>
+													<li class="list-group-item"> <span class="badge badge-danger">11</span> Morbi leo risus
+													</li>
+													<li class="list-group-item"> <span class="badge badge-success">3</span> Porta ac consectetur ac
+													</li>
+													<li class="list-group-item"> <span class="badge badge-warning">7</span> Vestibulum at eros
+													</li>
+												</ul>
+											</td>
+											<td class="padding-lg">
+												<div class="list-group">
+													<a href="#" class="list-group-item active"> <span class="badge badge-primary">5</span> Cras justo odio
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-info">14</span> Dapibus ac facilisis in
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-danger">11</span> Morbi leo risus
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-success">3</span> Porta ac consectetur ac
+													</a>
+													<a href="#" class="list-group-item"> <span class="badge badge-warning">7</span> Vestibulum at eros
+													</a>
+												</div>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<div class="panel-title">Diagnostico de atendimento</div>
+								<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1"
+									 class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+									<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+								</div>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-condensed table-bordered table-hover table-striped">
+									<tbody>
+										<tr>
+											<td>Tecnico Checklist:</td>
+											<td><span class="label label-warning2">Sim</span></td>
+										</tr>
+										<tr>
+											<td>Cliente HeavyUser:</td>
+											<td><span class="label label-success">Nao</span></td>
+										</tr>
+										<tr>
+											<td>Massiva SAS: </td>
+											<td><span class="label label-success">Nao</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td width="50%"> <strong>Voz</strong> <br>
+												...
+											</td>
+											<td> <strong>Banda</strong> <br>
+												...
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td width="33%"> <strong>Donut Charts</strong> <br>
+												... </td>
+											<td width="33%"> <strong>Colored</strong> <br>
+												... </td>
+											<td width="33%"> <strong>Formatted</strong> <br>
+												... </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-body with-table">
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<td> <strong>Line Chart</strong> <br>
+												...
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+
+
+
+
+				<div class="col-sm-6" style="display:none;">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title">Grouped Lists</div>
+							<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1"
+								 class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+								<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+							</div>
+						</div>
+						<div class="panel-body with-table">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th width="50%">Simple</th>
+										<th>With Links</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="padding-lg">
+											<ul class="list-group">
+												<li class="list-group-item"> <span class="badge badge-primary">5</span> Cras justo odio
+												</li>
+												<li class="list-group-item"> <span class="badge badge-info">14</span> Dapibus ac facilisis in
+												</li>
+												<li class="list-group-item"> <span class="badge badge-danger">11</span> Morbi leo risus
+												</li>
+												<li class="list-group-item"> <span class="badge badge-success">3</span> Porta ac consectetur ac
+												</li>
+												<li class="list-group-item"> <span class="badge badge-warning">7</span> Vestibulum at eros
+												</li>
+											</ul>
+										</td>
+										<td class="padding-lg">
+											<div class="list-group">
+												<a href="#" class="list-group-item active"> <span class="badge badge-primary">5</span> Cras justo odio
+												</a>
+												<a href="#" class="list-group-item"> <span class="badge badge-info">14</span> Dapibus ac facilisis in
+												</a>
+												<a href="#" class="list-group-item"> <span class="badge badge-danger">11</span> Morbi leo risus
+												</a>
+												<a href="#" class="list-group-item"> <span class="badge badge-success">3</span> Porta ac consectetur ac
+												</a>
+												<a href="#" class="list-group-item"> <span class="badge badge-warning">7</span> Vestibulum at eros
+												</a>
+											</div>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title">Diagnostico de atendimento</div>
+							<div class="panel-options"> <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1"
+								 class="bg"><i class="entypo-cog"></i></a> <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+								<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a> <a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+							</div>
+						</div>
+						<div class="panel-body with-table">
+							<table class="table table-condensed table-bordered table-hover table-striped">
+								<tbody>
+									<tr>
+										<td>Tecnico Checklist:</td>
+										<td><span class="label label-warning2">Sim</span></td>
+									</tr>
+									<tr>
+										<td>Cliente HeavyUser:</td>
+										<td><span class="label label-success">Nao</span></td>
+									</tr>
+									<tr>
+										<td>Massiva SAS: </td>
+										<td><span class="label label-success">Nao</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="panel-body with-table">
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td width="50%"> <strong>Voz</strong> <br>
+											...
+										</td>
+										<td> <strong>Banda</strong> <br>
+											...
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="panel-body with-table">
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td width="33%"> <strong>Donut Charts</strong> <br>
+											... </td>
+										<td width="33%"> <strong>Colored</strong> <br>
+											... </td>
+										<td width="33%"> <strong>Formatted</strong> <br>
+											... </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="panel-body with-table">
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td> <strong>Line Chart</strong> <br>
+											...
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer class="main">
+
+
+
+		</footer>
+	</div>
+
+
+
+	</div>
+
+
+	<!-- Modal 3 (Custom Width)-->
+	<div class="modal fade custom-width" id="modal-debug">
+		<div class="modal-dialog" style="width: 96%">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">DebugBox</h4>
+				</div>
+				<div class="tabs-vertical-env">
+					<ul class="nav tabs-vertical">
+						<!-- available classes "right-aligned" -->
+						<li class="active"><a href="#debug-reqdelay" data-toggle="tab">Request Delay</a></li>
+						<li><a href="#debug-main" data-toggle="tab">DebugBox</a></li>
+						<li><a href="#debug-gps" data-toggle="tab"> GPS</a></li>
+						<li><a href="#debug-manobra" data-toggle="tab"> Manobra Única</a></li>
+						<li><a href="#debug-sas" data-toggle="tab"> SAS</a></li>
+						<li><a href="#debug-wise" data-toggle="tab"> WiseTool</a></li>
+						<li><a href="#debug-pn" data-toggle="tab"> PnAdmin Principal</a></li>
+						<li><a href="#debug-pncx" data-toggle="tab"> PnAdmin PTS/CX</a></li>
+						<li><a href="#debug-gestor" data-toggle="tab"> Gestor de Bloqueios</a></li>
+						<li><a href="#debug-acs" data-toggle="tab"> ACS</a></li>
+						<li><a href="#debug-transferb" data-toggle="tab"> Transfer Box</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane" id="debug-main">
+							<div>Habilitar debug para: <select>
+									<option> Todos </option>
+								</select></div>
+							<div id="debugbox" class="modal-body"> ... </div>
+						</div>
+						<div class="tab-pane active" id="debug-reqdelay"></div>
+						<div class="tab-pane" id="debug-gps"> Nenhum log. </div>
+						<div class="tab-pane" id="debug-manobra"> Nenhum log. </div>
+						<div class="tab-pane" id="debug-sas"> Nenhum log. </div>
+						<div class="tab-pane" id="debug-wise"> Nenhum log. </div>
+						<div class="tab-pane" id="debug-pn"> Nenhum log. </div>
+						<div class="tab-pane" id="debug-pncx"> Nenhum log. </div>
+						<div class="tab-pane" id="debug-gestor"> Nenhum log. </div>
+						<div class="tab-pane" id="debug-acs"> Nenhum log. </div>
+						<div class="tab-pane" id="debug-transferb"> Nenhum log. </div>
+					</div>
+				</div>
+
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal 3 (Custom Width)-->
+	<div class="modal fade custom-width" id="modal-frame">
+		<div class="modal-dialog" style="width: 96%">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" style="">
+						VSMonitor TBox |
+						<button type="button" class="btn btn-default btn-xs">SAS-Portability</button>
+						<button type="button" class="btn btn-default btn-xs">Wise-Provisioning</button>
+						<button type="button" class="btn btn-default btn-xs" name="abreSanProbInstancia">SAN (Prob. Instancia)</button>
+					</h4>
+
+
+				</div>
+
+				<div id="modalframe" class="modal-body" style="padding:2px;">
+					<table width="100%">
+						<tr>
+							<td width="250px" valign="top" style="padding-left:5px;">
+								<h4>OS</h4>
+								<table width="100%">
+									<tr>
+										<td>Atividade: </td>
+										<td><span id="toolbox-atividade"></span></td>
+									</tr>
+									<tr>
+										<td>Instancia(GPS): </td>
+										<td><span id="toolbox-instancia"></span></td>
+									</tr>
+									<tr>
+										<td>RPON(GPS): </td>
+										<td><span id="toolbox-rpon"></span></td>
+									</tr>
+								</table>
+
+								<hr>
+								<h4>CX Portability</h4>
+								<form name="form-PTSsisnum" id="form-PTSsisnum" target="toolFrame" method="post" action="http://gvtapp/sas/portability">
+
+									<div class="input-group" style="margin-bottom:2px;"> <input type="text" id="targetSwitch" name="targetSwitch"
+										 class="form-control" placeholder="Switch"> <span class="input-group-btn"> <button class="btn btn-default"
+											 type="button"><i class="entypo-left"></i></button> </span> </div>
+									<div class="input-group" style="margin-bottom:2px;"> <input type="text" id="cnl" name="cnl" class="form-control"
+										 placeholder="CNL"> <span class="input-group-btn"> <button class="btn btn-default" type="button"><i class="entypo-left"></i></button>
+										</span> </div>
+									<div class="input-group" style="margin-bottom:2px;"> <input type="text" id="instances" name="instances" class="form-control"
+										 placeholder="Instância"> <span class="input-group-btn"> <button class="btn btn-default" type="button"><i
+												 class="entypo-left"></i></button> </span> </div>
+									<div class="input-group" style="margin-bottom:2px;"> <label>Desvio de Rota: <input type="checkbox" id="routeDeviation"
+											 name="routeDeviation" value="true"></label> </div>
+									<div class="input-group" style="display:none;"> <label>Uma ou mais instancias: <input type="radio" id="isNotRange"
+											 name="isRange" value="false" checked="checked"> </label> </div>
+									<div class="input-group" style="margin-bottom:2px;"> <input type="button" id="inputInsert" name="inputInsert"
+										 value="Configurar/Modificar"> </div>
+									<input type="hidden" name="action" value="insert">
+									<input type="hidden" name="operation" value="configureCxPts">
+									<input type="hidden" name="serverResponse" value="">
+									<input type="hidden" name="rangeFrom" value="">
+									<input type="hidden" name="rangeTo" value="">
+								</form>
+								<hr>
+								<h4>ACS / Wise Equipamentos</h4>
+								<div id="provisioning-equipamentos">
+								</div>
+								<hr>
+								<h4>Notas Particulares:</h4>
+								<div style="width:100%;white-space: pre-wrap;" id="toolbox-notas">
+								</div>
+								<hr>
+
+							</td>
+							<td>
+								<iframe sandbox="allow-modals allow-forms allow-pointer-lock	 allow-same-origin	allow-scripts allow-popups"
+								 name="toolFrame" style="width:100%;height:600px;" src="" frameborder="none"></iframe>
+							</td>
+						</tr>
+
+					</table>
+				</div>
+				<!--
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Modal 3 (Custom Width)-->
+	<div class="modal fade custom-width" id="modal-frame2">
+		<div class="modal-dialog" style="width: 96%">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">VSMonitor TBox [ CPqD ]</h4>
+				</div>
+
+				<div id="modalframe2" class="modal-body" style="padding:2px;">
+					<table width="100%">
+						<tr>
+							<td width="250px" valign="top" style="padding-left:5px;">
+								<h4>xxx</h4>
+								<div>
+									Atividade: <span id=""></span><br>
+									PON: <span id=""></span><br>
+								</div>
+								<hr>
+								<h4>Equipamentos</h4>
+								<div id="">
+								</div>
+
+							</td>
+							<td>
+								<iframe sandbox="allow-modals allow-forms allow-pointer-lock	 allow-same-origin	allow-scripts allow-popups"
+								 name="toolFrame2" style="width:100%;height:600px;" src="" frameborder="none"></iframe>
+							</td>
+						</tr>
+
+					</table>
+				</div>
+				<!--
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Modal Massiva SAS-->
+	<div class="modal fade custom-width" id="eventosMassivosSAS">
+		<div class="modal-dialog" style="width: 700px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Eventos Massivos</h4>
+				</div>
+
+				<div class="modal-body">
+					<div>
+						<blockquote class="blockquote-red" id="eventoMassivoMSG" style="display:none;">
+
+						</blockquote>
+					</div>
+					<div id="eventosMassivosSAS-c"></div>
+
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Modal Gestor-->
+	<div class="modal fade custom-width" id="modalGestor">
+		<div class="modal-dialog" style="width: 900px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Gestor de bloqueios</h4>
+				</div>
+
+				<div class="modal-body">
+					<div id="modalGestor-c"></div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<!-- Modal Gestor-->
+	<div class="modal fade custom-width" id="modalPriorizacao">
+		<div class="modal-dialog" style="width: 900px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Priorização de Chamados</h4>
+				</div>
+
+				<div class="modal-body">
+					<div id="modalPriorizacao-c"></div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<!-- Modal Gestor-->
+	<div class="modal fade custom-width" id="modalBinadas">
+		<div class="modal-dialog" style="width: 900px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Binadas via TBS</h4>
+				</div>
+
+				<div class="modal-body">
+					<div id="modalBinadas-c"></div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-info" style="display:none">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Modal ordens GPS SAS-->
+	<div class="modal fade custom-width" id="ordensAtivasGPS">
+		<div class="modal-dialog" style="width: 700px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Ordens ativas</h4>
+				</div>
+
+				<div class="modal-body">
+					<div id="ordensAtivasGPS-c"></div>
+
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Modal Centrais-->
+	<div class="modal fade custom-width" id="modal-centraltech">
+		<div class="modal-dialog" style="width: 90%">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Centrais</h4>
+				</div>
+
+				<div class="modal-body">
+					<div id="centraltech-conteudo"></div>
+					<!--
+					<iframe width="100%" height="400px" frameborder="none" src="https://webssh.bartlweb.net"></iframe>
+					-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Modal Keeper -->
+	<div class="modal fade custom-width" id="modal-keeper">
+		<div class="modal-dialog" style="width: 700px">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">VSMonitor Painel</h4>
+				</div>
+				<div class="modal-body">
+					<table width="100%">
+						<tr>
+							<td width="50%" valign="top" style="padding-right:5px;">
+								<div id=""></div>
+								<div style="width:100%;">
+									<form name="keeper_form" action="#">
+										Informações:<br>
+										<div class="input-group minimal">
+											<span class="input-group-addon"><i class="entypo-vcard"></i></span>
+											<input id="keeper_name" type="text" class="form-control" placeholder="Nome" required="required">
+										</div>
+										<div class="input-group minimal">
+											<span class="input-group-addon"><i class="entypo-user"></i></span>
+											<input id="keeper_user" type="text" class="form-control" placeholder="Matricula" required="required">
+										</div>
+										<div class="input-group minimal">
+											<span class="input-group-addon"><i class="entypo-key"></i></span>
+											<input id="keeper_pass" type="password" class="form-control" placeholder="Senha" required="required">
+										</div>
+										<br>Setor / Skill:<br>
+										<select id="skillPadrao" style="width:100%;" required="required">
+											<option value=""> Selecione </option>
+											<option value="Manobra"> Manobra / Cadastro </option>
+											<option value="Multiskill"> Multiskill / Suporte </option>
+											<option value="Especializada"> Especializada </option>
+											<option value="Checklist"> Checklist / Baixa </option>
+											<option value="Triagem"> Triagem </option>
+										</select>
+										<br><br>
+										Opções:<br>
+										<input type="checkbox" checked="checked" /> Efetuar Login automaticamente quando sistema cair<br>
+										<input type="checkbox" checked="checked" /> Efetuar Login ao abrir o painel<br>
+										<input type="checkbox" id="offlineDev" style="display:none;" />
+
+										<hr>
+										<input id="keeper_confirma" type="submit" value="Confirmar" /input> | <button id="keeper_deletar" type="button">Deletar</button>
+										<br>
+
+
+									</form>
+								</div><br>
+								<div id="keeper_msg"></div>
+							</td>
+							<td width="50%" valign="top" style="padding-left:5px">
+								Telnet (Putty):<br>
+								<select style="width:100%;">
+									<option> G0056638 </option>
+									<option> G0047430 </option>
+								</select><br>
+								<input id="telnet_login" type="text" class="form-control" placeholder="Login" style="width:100px;display:inline;">
+								<input id="telnet_pass" type="password" class="form-control" placeholder="Senha" style="width:100px;display:inline;">
+								<button type="button" style="display:inline;"> Add </button>
+								<button type="button" style="display:inline;"> Del </button>
+
+							</td>
+						</tr>
+					</table>
+
+					<!--
+					<iframe width="100%" height="400px" frameborder="none" src="https://webssh.bartlweb.net"></iframe>
+					-->
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div id="containerTemporario"></div>
+	<div id="uptools" style="
+		position:absolute;
+		left:50%;
+		margin-left:-250px;
+		top:0px;
+		width:500px;
+		background:#ddd;
+		color:#ddd;
+		border-radius:0px 0px 5px 5px;
+		padding:0px 5px 0px 5px;
+		height:18px;
+		">
+		<div class="keeper_btn" id="keeper_eta">ETA</div>
+		<div class="keeper_btn" id="keeper_sas">SaS</div>
+		<div class="keeper_btn" id="keeper_wise">Wise</div>
+		<div class="keeper_btn" id="keeper_ttv">TTV</div>
+		<div class="keeper_btn" id="keeper_gestor">Gestor</div>
+		<div class="keeper_btn" id="keeper_acs">ACS</div>
+		<div class="keeper_btn" id="keeper_idm">IDM</div>
+		<div class="keeper_btn" id="keeper_dm">DM</div>
+		<div class="keeper_btn" id="keeper_cpqd">CPQD</div>
+		<div class="keeper_btn" id="keeper_efika">Efika</div>
+		<div class="keeper_btn" id="keeper_wfm">WFM</div>
+		<div class="keeper_btn" id="keeper_bpm">BPM</div>
+		<div style="float:right;margin-top:1px;"><a id="keeper_key" name="keeper_key" href="#" data-rel="close" class="bg"
+			 style="background:#ccc;border-radius:3px;color:#888"><i name="keeper_key" class="entypo-key"></i></a></div>
+
+
+
+	</div>
+
+
+
+
+	<div style="position: absolute;top:-9000px; width: 99px; height: 66px; margin: 0px;">
+		<textarea id="txtfinal" class="txtfinal"> &nbsp; </textarea>
+		<textarea id="txttemp" class="txttemp"> &nbsp; </textarea>
+		<div id="launch_newform"></div>
+	</div>
+
+	<script src="assets/js/bootstrap337.js"></script>
+	<script src="auto-complete.js"></script>
+	<script src="assets/js/bootstrap-confirmation.js"></script>
+	<script src="painel.js"></script>
+	<!-- Bottom scripts (common) -->
+	<script src="assets/js/gsap/main-gsap.js"></script>
+	<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="assets/js/joinable.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/neon-api.js"></script>
+
+
+
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/neon-custom.js"></script>
+
+
+	<!-- Demo Settings -->
+	<script src="assets/js/neon-demo.js"></script>
+
+</body>
+
+</html>

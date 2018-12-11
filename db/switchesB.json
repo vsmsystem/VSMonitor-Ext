@@ -1,0 +1,898 @@
+	[
+		{
+			"nome":			"SPSPO_JUS03",
+			"cidade":		"",
+			"regiao":		"IMS1",
+			"ip":			"",
+			"tecnologia":	"IMS",
+			"fabricante":	"Huawei"
+		},
+		{
+			"nome":			"RJRJO_SAS02",
+			"cidade":		"",
+			"regiao":		"IMS1",
+			"ip":			"",
+			"tecnologia":	"IMS",
+			"fabricante":	"Huawei"
+		},
+		{
+			"nome":			"PRCTA_VMS02",
+			"cidade":		"",
+			"regiao":		"IMS2",
+			"ip":			"",
+			"tecnologia":	"IMS",
+			"fabricante":	"Huawei"
+		},
+		{
+			"nome":			"PRMGA_VMS04",
+			"cidade":		"",
+			"regiao":		"IMS2",
+			"ip":			"",
+			"tecnologia":	"IMS",
+			"fabricante":	"Huawei"
+		},
+		{
+			"nome":			"MGBHE_HMS04",
+			"cidade":		"",
+			"regiao":		"IMS3",
+			"ip":			"",
+			"tecnologia":	"IMS",
+			"fabricante":	"Huawei"
+		},
+		{
+			"nome":			"PERCE_LNS03",
+			"cidade":		"",
+			"regiao":		"IMS3",
+			"ip":			"",
+			"tecnologia":	"IMS",
+			"fabricante":	"Huawei"
+		},
+		{
+			"nome":			"ALMCO_AJS01",
+			"cidade":		"MACEIO",
+			"regiao":		"82",
+			"ip":			"10.180.77.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"BAALH_GVS01",
+			"cidade":		"ALAGOINHAS",
+			"regiao":		"75",
+			"ip":			"10.171.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"BAFSA_GVS01",
+			"cidade":		"FEIRA DE SANTANA",
+			"regiao":		"75",
+			"ip":			"10.171.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"BASDR_VGS01",
+			"cidade":		"SALVADOR",
+			"regiao":		"71",
+			"ip":			"10.171.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"BASDR_VGS02",
+			"cidade":		"SALVADOR",
+			"regiao":		"71",
+			"ip":			"10.171.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"CEFLA_JBS01",
+			"cidade":		"FORTALEZA",
+			"regiao":		"85",
+			"ip":			"10.185.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"DFBSA_CBS01",
+			"cidade":		"BRASÍLIA",
+			"regiao":		"61",
+			"ip":			"10.161.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"DFBSA_SIS01",
+			"cidade":		"BRASÍLIA",
+			"regiao":		"61",
+			"ip":			"10.164.0.101",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"ESVTA_ASS01",
+			"cidade":		"VITÓRIA",
+			"regiao":		"27",
+			"ip":			"10.227.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"GOANS_EPS01",
+			"cidade":		"ANAPOLIS",
+			"regiao":		"62",
+			"ip":			"10.161.72.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"GOGNA_DOS01",
+			"cidade":		"GOIÂNIA",
+			"regiao":		"62",
+			"ip":			"10.161.88.100",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"GOGNA_DOS03",
+			"cidade":		"GOIANIA",
+			"regiao":		"62",
+			"ip":			"10.160.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"GOGNA_DOS03",
+			"cidade":		"APARECIDA DE GOIANIA",
+			"regiao":		"62",
+			"ip":			"10.160.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"GOGNA_DOS03",
+			"cidade":		"GOIÂNIA",
+			"regiao":		"62",
+			"ip":			"10.160.129.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"GOANS_EPS02",
+			"cidade":		"GOIÂNIA",
+			"regiao":		"62",
+			"ip":			"10.160.129.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"GORVD_PVS01",
+			"cidade":		"RIO VERDE",
+			"regiao":		"64",
+			"ip":			"10.160.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MGBHE_PBS01",
+			"cidade":		"BELO HORiZONTE",
+			"regiao":		"31",
+			"ip":			"10.131.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MGBHE_HMS01",
+			"cidade":		"BELO HORiZONTE",
+			"regiao":		"31",
+			"ip":			"10.131.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MGBHE_HMS02",
+			"cidade":		"BELO HORiZONTE",
+			"regiao":		"31",
+			"ip":			"10.131.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MGIIG_ALS01",
+			"cidade":		"BELO HORiZONTE",
+			"regiao":		"31",
+			"ip":			"10.131.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MGGVS_TMS01",
+			"cidade":		"GOVERNADOR VALADARES",
+			"regiao":		"33",
+			"ip":			"10.131.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MGJFA_DVS01",
+			"cidade":		"JUÍZ DE FORA",
+			"regiao":		"32",
+			"ip":			"10.131.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MSCPE_CMS01",
+			"cidade":		"CAMPO GRANDE",
+			"regiao":		"67",
+			"ip":			"10.161.64.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MSDOS_RBS01",
+			"cidade":		"DOURADOS",
+			"regiao":		"67",
+			"ip":			"10.161.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MSCPE_CMS02",
+			"cidade":		"DOURADOS",
+			"regiao":		"67",
+			"ip":			"10.161.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MTCBA_MCS01",
+			"cidade":		"CUIABÁ",
+			"regiao":		"65",
+			"ip":			"10.161.48.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MTCBA_MCS02",
+			"cidade":		"CUIABÁ",
+			"regiao":		"65",
+			"ip":			"10.161.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MTROI_MRS01",
+			"cidade":		"RONDONOPOLIS",
+			"regiao":		"66",
+			"ip":			"10.160.129.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"MTROI_MRS01",
+			"cidade":		"RONDONOPOLIS",
+			"regiao":		"66",
+			"ip":			"10.160.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PBCGE_CCS01",
+			"cidade":		"CAMPINA GRANDE",
+			"regiao":		"83",
+			"ip":			"10.181.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PBJPA_EPS01",
+			"cidade":		"JOAO PESSOA",
+			"regiao":		"83",
+			"ip":			"10.181.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PERCE_LNS01",
+			"cidade":		"RECIFE",
+			"regiao":		"81",
+			"ip":			"10.181.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRCSC_BRS01",
+			"cidade":		"CASCAVEL",
+			"regiao":		"45",
+			"ip":			"10.141.56.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRCSC_BRS02",
+			"cidade":		"CASCAVEL",
+			"regiao":		"45",
+			"ip":			"10.141.56.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRCSC_BRS02",
+			"cidade":		"CASCAVEL",
+			"regiao":		"45",
+			"ip":			"10.141.56.197",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRCSC_BRS03",
+			"cidade":		"CASCAVEL",
+			"regiao":		"45",
+			"ip":			"10.141.245.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRCTA_LPS01",
+			"cidade":		"CURITIBA",
+			"regiao":		"41",
+			"ip":			"10.141.0.99",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRCTA_PVS01",
+			"cidade":		"CURITIBA",
+			"regiao":		"41",
+			"ip":			"10.141.245.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRFOZ_RBS01",
+			"cidade":		"FOZ DO IGUAÇU",
+			"regiao":		"45",
+			"ip":			"10.141.64.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRGRP_FVS01",
+			"cidade":		"GUARAPUAVA",
+			"regiao":		"42",
+			"ip":			"10.141.176.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRLDA_MBS01",
+			"cidade":		"LONDRINA",
+			"regiao":		"43",
+			"ip":			"10.141.0.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRLDA_MBS01",
+			"cidade":		"LONDRINA",
+			"regiao":		"43",
+			"ip":			"10.141.40.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRLDA_MBS02",
+			"cidade":		"LONDRINA",
+			"regiao":		"43",
+			"ip":			"10.141.0.99",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRMGA_JVS01",
+			"cidade":		"MARINGÁ",
+			"regiao":		"44",
+			"ip":			"10.141.32.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRPGO_VMS01",
+			"cidade":		"PONTA GROSSA",
+			"regiao":		"42",
+			"ip":			"10.141.48.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRPGO_VMS02",
+			"cidade":		"PONTA GROSSA",
+			"regiao":		"42",
+			"ip":			"10.141.48.197",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"PRPNG_RAS01",
+			"cidade":		"PARANAGUÁ",
+			"regiao":		"41",
+			"ip":			"10.141.184.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RJRJO_PVS04",
+			"cidade":		"RIO DE JANEIRO",
+			"regiao":		"21",
+			"ip":			"10.220.64.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RJRJO_PVS04",
+			"cidade":		"NITEROI",
+			"regiao":		"21",
+			"ip":			"10.220.64.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RJRJO_SAS01",
+			"cidade":		"SÃO GONCALO",
+			"regiao":		"21",
+			"ip":			"10.220.69.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RJRJO_SAS01",
+			"cidade":		"RIO DE JANEIRO",
+			"regiao":		"21",
+			"ip":			"10.220.69.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RJRJO_SAS01",
+			"cidade":		"NOVA IGUAÇU",
+			"regiao":		"21",
+			"ip":			"10.220.69.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RJRJO_SAS01",
+			"cidade":		"DUQUE DE CAXIAS",
+			"regiao":		"21",
+			"ip":			"10.220.69.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RNNTL_BVS01",
+			"cidade":		"NATAL",
+			"regiao":		"84",
+			"ip":			"10.180.77.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RNNTL_BVS01",
+			"cidade":		"NATAL",
+			"regiao":		"84",
+			"ip":			"10.180.77.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"ROPVO_APS01",
+			"cidade":		"PORTO VELHO",
+			"regiao":		"69",
+			"ip":			"10.161.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSCAN_AUS01",
+			"cidade":		"CANOAS",
+			"regiao":		"51",
+			"ip":			"10.151.64.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSCAN_AUS03",
+			"cidade":		"CANOAS",
+			"regiao":		"51",
+			"ip":			"10.151.64.100",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSCSL_MHS01",
+			"cidade":		"CAXIAS DO SUL",
+			"regiao":		"54",
+			"ip":			"10.151.56.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSCSL_MHS02",
+			"cidade":		"CAXIAS DO SUL",
+			"regiao":		"54",
+			"ip":			"10.151.0.99",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSGTI_ABS01",
+			"cidade":		"GRAVATAI",
+			"regiao":		"51",
+			"ip":			"10.151.80.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSNHO_MAS01",
+			"cidade":		"NOVO HAMBURGO",
+			"regiao":		"51",
+			"ip":			"10.151.48.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSNHO_MAS03",
+			"cidade":		"SAPIRANGA",
+			"regiao":		"51",
+			"ip":			"10.151.48.100",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSNHO_MAS03",
+			"cidade":		"NOVO HAMBURGO",
+			"regiao":		"51",
+			"ip":			"10.151.48.100",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSPAE_CGS01",
+			"cidade":		"PORTO ALEGRE",
+			"regiao":		"51",
+			"ip":			"10.151.0.99",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSNHO_MAS02",
+			"cidade":		"PORTO ALEGRE",
+			"regiao":		"51",
+			"ip":			"10.151.0.99",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSPAE_CGS02",
+			"cidade":		"PORTO ALEGRE",
+			"regiao":		"51",
+			"ip":			"10.151.0.99",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSPAS_JCS01",
+			"cidade":		"PASSO FUNDO",
+			"regiao":		"54",
+			"ip":			"10.151.144.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSPLT_QNS01",
+			"cidade":		"PELOTAS",
+			"regiao":		"53",
+			"ip":			"10.151.32.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSPLT_QNS02",
+			"cidade":		"PELOTAS",
+			"regiao":		"53",
+			"ip":			"10.151.0.99",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSSMA_NAS01",
+			"cidade":		"SANTA MARIA",
+			"regiao":		"55",
+			"ip":			"10.151.40.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"RSSMA_NAS02",
+			"cidade":		"SANTA MARIA",
+			"regiao":		"55",
+			"ip":			"10.151.40.100",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCBNU_XVS01",
+			"cidade":		"BLUMENAU",
+			"regiao":		"47",
+			"ip":			"10.141.80.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCBNU_XVS03",
+			"cidade":		"ITAJAI",
+			"regiao":		"47",
+			"ip":			"10.150.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCBNU_XVS03",
+			"cidade":		"CAMBORIU",
+			"regiao":		"47",
+			"ip":			"10.150.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCBNU_XVS03",
+			"cidade":		"GASPAR",
+			"regiao":		"47",
+			"ip":			"10.150.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCBNU_XVS03",
+			"cidade":		"BLUMENAU",
+			"regiao":		"47",
+			"ip":			"10.150.129.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCBNU_XVS03",
+			"cidade":		"BALNEARIO CAMBORIU",
+			"regiao":		"47",
+			"ip":			"10.150.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCCUA_JCS01",
+			"cidade":		"CRICIUMA",
+			"regiao":		"48",
+			"ip":			"10.141.160.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCCUA_JCS02",
+			"cidade":		"CRICIUMA",
+			"regiao":		"48",
+			"ip":			"10.150.129.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCCUA_JCS02",
+			"cidade":		"CRICIUMA",
+			"regiao":		"48",
+			"ip":			"10.150.130.80",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCFNS_POS01",
+			"cidade":		"FLORIANÓPOLIS",
+			"regiao":		"48",
+			"ip":			"10.141.72.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCFNS_POS02",
+			"cidade":		"FLORIANÓPOLIS",
+			"regiao":		"48",
+			"ip":			"10.151.0.99",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCJVE_ADS01",
+			"cidade":		"JOINVILLE",
+			"regiao":		"47",
+			"ip":			"10.141.88.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCJVE_ADS03",
+			"cidade":		"JOINVILLE",
+			"regiao":		"47",
+			"ip":			"10.141.88.114",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCJVE_ADS04",
+			"cidade":		"JOINVILLE",
+			"regiao":		"47",
+			"ip":			"10.150.129.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SCSOO_LLS01",
+			"cidade":		"SÃO JOSÉ",
+			"regiao":		"48",
+			"ip":			"10.241.32.98",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SEAJU_AMS01",
+			"cidade":		"ARACAJÚ",
+			"regiao":		"79",
+			"ip":			"10.180.77.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SEAJU_AMS01",
+			"cidade":		"ARACAJU",
+			"regiao":		"79",
+			"ip":			"10.180.77.117",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPCAS_DAS01",
+			"cidade":		"INDAIATUBA",
+			"regiao":		"19",
+			"ip":			"10.210.68.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPCAS_DAS01",
+			"cidade":		"CAMPINAS",
+			"regiao":		"19",
+			"ip":			"10.210.68.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPCAS_DAS01",
+			"cidade":		"CAMPINAS",
+			"regiao":		"19",
+			"ip":			"10.210.68.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPGRS_01TP",
+			"cidade":		"SANTO ANDRE",
+			"regiao":		"11",
+			"ip":			"10.210.76.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPGRS_TPS01",
+			"cidade":		"GUARULHOS",
+			"regiao":		"11",
+			"ip":			"10.210.76.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPGRS_TPS02",
+			"cidade":		"SUZANO",
+			"regiao":		"11",
+			"ip":			"10.210.76.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPGRS_TPS02",
+			"cidade":		"MOGI DAS CRUZES",
+			"regiao":		"11",
+			"ip":			"10.210.76.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPGRS_TPS02",
+			"cidade":		"ARUJA",
+			"regiao":		"11",
+			"ip":			"10.210.76.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPJAI_FAS01",
+			"cidade":		"JUNDIAI",
+			"regiao":		"11",
+			"ip":			"10.211.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPOCO_FBS01",
+			"cidade":		"OSASCO",
+			"regiao":		"11",
+			"ip":			"10.210.76.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPPAA_SJS01",
+			"cidade":		"PIRACICABA",
+			"regiao":		"19",
+			"ip":			"10.210.68.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPSNE_DCS01",
+			"cidade":		"SÃO BERNARDO DO CAMPO",
+			"regiao":		"11",
+			"ip":			"10.210.72.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPSNE_DCS01",
+			"cidade":		"SANTO ANDRE",
+			"regiao":		"11",
+			"ip":			"10.210.72.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPSOC_DSS01",
+			"cidade":		"SOROCABA",
+			"regiao":		"15",
+			"ip":			"10.211.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPSPO_JUS01",
+			"cidade":		"SAO PAULO",
+			"regiao":		"11",
+			"ip":			"10.210.80.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPSPO_JUS01",
+			"cidade":		"MAUA",
+			"regiao":		"11",
+			"ip":			"10.210.80.16",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		},
+		{
+			"nome":			"SPSTS_CRS01",
+			"cidade":		"SANTOS",
+			"regiao":		"13",
+			"ip":			"10.211.32.97",
+			"tecnologia":	"TDM",
+			"fabricante":	"Nortel"
+		}
+	]

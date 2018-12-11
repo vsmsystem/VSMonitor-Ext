@@ -1,0 +1,10 @@
+Mudanças acontecendo:
+ - login eta nas permissões
+ - login TTV permissões: sv2kpwfm3
+
+
+Mudanças futuras:
+ - adicionar opções de ocuptar a checknote2
+
+
+

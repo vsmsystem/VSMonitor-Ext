@@ -1,0 +1,57 @@
+# HX tutors MVC e Framework
+# ler documentação de extensões de chrome
+# BeMean - node.js
+# upinside
+# zend
+-------------------------------------------------------
+ - resgatar varios conceitos de linux/debian, shell, bash (subir um webserver com segurança, chroot/jail etc), ter um menubash, coisas assim
+ - dominar alguma linguagem de baixo nivel (pelo menos um C, para eletronicos)
+ - dominar alguma linguagem web (será php e js, +node), e alguma linguagem cross e mobile (tipo java)
+ - dominar fisica, matematica (calculos pelo menos 1 e 2)
+ - dominar os assuntos de microeletronica, ler os livros recomendados, e especializar em telecom
+ - uma pós, para titulo talvez, provavelmente java ou segurança de dados
+ - ja adiantar o projeto yplus pra controle financeiro, e para esses planejamentos de estudo e desenvolvimento
+-------------------------------------------------------
+! Historico e Diploma (procuração)
+pagar 2 alugueis e 2 condominios,
+ir na caixa verificar condominio passado,
+ir na caixa receber
+iniciar vistoria
+MBA federal
+comprar caixa de areia
+pagar net acacia
+-------------------------------------------------------
+yplus com lista de coisas a fazer + planos de estudo (coolocar metas, e registrar coisas feitas)
+
+elaborata
+http://ordasoft.com/car-template-free-joomla-theme
+
+
+
+ - criar uma nova tatica de estudo criada para a geração atual (geração da tecnologia)
+ - essas taticas envolvem como agir no dia a dia, como se sustentar quimicamente, alimentos adequados pra estilo de vida e bem estar, coisas relacionada a saude fisica e mental, roptinas,
+ - ferramentas de apio, aplicativos, sistemjas, lembretes, agendas, metas, sistemas para faculdades, sistemas para alunos, integração entre ambos, algo em um ambito extremamente mais evoluido
+ - criar um sistema de niveis, que mede a capacidade e potencial da pessoa
+ - mostrar os livros que uma pessoa ja leu, e de onde ela tirou conheciomentos, este item é muito importante, sempre tem pessoas que nos admiram e tem vontade de seguir nossos passos, aqui é onde elas podem fazer isso
+ - na sessão que mostra o q voce ja leu e estudou, voce pode organizar as indicações por orem, primeiro isso depois aquilo, ou organizar por nivel, se vc tiver no nivel tal, leia tais livros, no proximo ler tais livros, em tal nivel ler tal coisa
+ - pode ser que surja algo no estilo rede social, onde seja possivel postar coisas e conhecimentos, e que seja ligado a varias areas do ensino, uma rede social onde os posts nao sao para ser futeis, e póde ser interligada com o facebook, no face a gente posta e le as futilidades, na outra (light neuron por exemplo), postaremos e leremos coisas relacionadas apenas as novidades de tecnologias, novidades dos metodos de ensino, e outras coisas do tipo.
+ 
+ 
+ GVT:
+  # portal do desenvolvedor
+   - disponibilizar ferramentas pensadas para para o dia a dia dos colegas de trabalho
+   - divulgar material e manual de uso das ferramentas
+   - canal de contato com quem usa as ferramentas
+
+ # novo modelo de intranet, a atual apenas tem o nome e matricvula do colaborador, o novo modelo teria:
+   - pontuação (ranking), baseado em indicadores, ou seja, nivel de habilidade
+   - sessão pessoal, ver os proprios indicadoires, tma, fcr, abs, aderencia, desconectadas, estouros
+   - painel publico: deixar postado informações que o usuario gostaria de compartilhar com a operação
+   - setor, se é manobra, multiskill, etc
+   - horario de trabalho (da contratação, e não escaloa do total view)
+   - portal do desenvolvedor, operadores com habilidades extras que criam ferramentas, disponibilzam elas aqui
+
+ # sistema de checklist, registro e integração, algo q não temos hoje
+   - base de dados interna com dados de cada atendimento de cada operador (banco de checklists)
+   - colher dados de sistemas automaticamente durante o atendimento
+   - 

@@ -1,0 +1,75 @@
+{
+  "name": "VSMonitor Ext",
+  "version": "0.0.53",
+  "manifest_version": 2,
+  "description": "Feita para agregar valores ao GPS, Manobra Única e Manobra Massiva, ainda em estágio alpha (por Valdecir Merli)",
+  "author": "Valdecir Merli (G0056638)",
+  "options_ui": {
+    "page": "Vweb/options.html",
+    "chrome_style": true,
+    "open_in_tab": true
+  },
+  "browser_action":{
+      "default_icon": "128.png",
+      "default_popup": "popup.html"
+   },
+   "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+   "icons": { "128": "128.png" },
+   
+    "permissions": [
+		"storage",
+        "clipboardRead",
+        "clipboardWrite",
+		"contextMenus",
+		"tabs",
+		"http://portalcolaboradores/*",
+		"http://sv2kppag2/*",
+		"http://pnadmin.gvt.com.br/*",
+		"http://gvtapp/*",
+		"http://acl.gvt.net.br/*",
+		"*://login.etadirect.com/*",
+		"http://sv2kpwfm3/*"
+    ],
+	"externally_connectable": {
+		"matches": [
+			"*://gpsco.gvt.net.br/*",
+			"*://gpsco.gvt.com.br/*"
+		]
+	},
+   "content_scripts": [{
+	"run_at": "document_end",
+    "matches": [
+		"*://gpsco.gvt.net.br/*",
+		"*://gpsco.gvt.com.br/*",
+		"*://appsagre.gvt.net.br/Manobraunica*",
+		"*://manobramassiva.gvt.net.br/*",
+		"*://efika/web/*",
+		"*://gvt.etadirect.com/*",
+		"*://sv2kppag2/*",
+		"*://wisetool.gvt.net.br/*"
+		],
+    "js": [ "start.js" ]
+  }],
+
+  "web_accessible_resources": [
+    "imgs/*.png",
+    "imgs/*.gif",
+	"imgs/*.jpg",
+	"db/shelfs.json",
+	"manobraunica/*",
+	"manobramassiva/*",
+	"wisetool/*",
+    "checknote/*",
+    "eta/*",
+    "plcontrol/*",
+	"Vweb/vsm-bar.html",
+	"Vweb/vsm-bar.js"
+  ]
+}
+
+
+
+

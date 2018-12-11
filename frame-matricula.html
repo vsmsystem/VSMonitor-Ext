@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+		<meta name="description" content="A basic template for a Chrome Extension using Twitter Bootstrap 3">
+		<meta name="author" content="Elliot Hesp">
+		
+		<title>VSM</title>
+		
+		<!-- Scripts -->
+		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- Cascading Style Sheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/custom.css" rel="stylesheet" media="screen">
+		<style>
+		.tabela td {white-space:nowrap;}
+		</style>
+	</head>
+	
+	<body>
+	
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i>Ferramentas  <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a target="_blank" href="Vweb/sistemas.html"><i class="glyphicon glyphicon-th-list"></i> Links / Sistemas</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<!--
+							<li>
+								<a href="#"><i class="glyphicon glyphicon-unchecked"></i> Centrais SPG</a>
+							</li>
+							<li>
+								<a href="#"><i class="glyphicon glyphicon-unchecked"></i> Intranet / contatos</a>
+							</li>-->
+							<li>
+								<a href="#"><i class="glyphicon glyphicon-unchecked"></i> Fila de Retorno</a>
+							</li>
+						</ul>
+						
+					</li>
+					<div class="navbar-form navbar-left"> <div class="form-group"> <input id="gsearchtext"  class="form-control" placeholder="G0056638"> </div> <button id="gsearch" type="submit" class="btn btn-default">ok</button> </div>
+					<!--
+					<!--
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-thumbs-up"></i>
+						</a>
+					</li>
+					-->
+
+					
+				</ul>
+			   <ul class="nav navbar-nav navbar-right">
+				<!--<li><a href="#">Extra</a></li>-->
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span> &nbsp;&nbsp;</a>
+				  <ul class="dropdown-menu">
+					<li><a target="_blank" href="https://chrome.google.com/webstore/detail/vsmonitor-ext/mhdhcccejcjfanablmohbpdbepdkokkj?hl=pt-BR">Atualização</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="Vweb/options.html" target="_blank">Opções</a></li>
+				  </ul>
+				</li>
+				
+			  </ul>
+			</div>
+		</nav>
+		<div style="height:55px;">&nbsp;</div>
+		<section>
+		<div id="toolnow" style="width:550px;padding:2px;overflow:auto;">
+			
+			
+			<div style="">
+				<div class="panel panel-default" style="margin-bottom:0px;">
+					<div class="panel-heading">
+						<span class="glyphicon glyphicon-user"></span><b> &nbsp; </b></div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-12">
+								<ul class="demo2">
+									<li class="news"><span style="font-weight:bold;"> &nbsp; </span>
+									 <div style="padding:15px 15px;">Para buscar um colaborador, insira o nome, ou a matricula de quem deseja encontrar</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<div style="display:none;">
+
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">...1</div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+		<div class="list-group">
+		  <a href="#" class="list-group-item active">
+			<h4 class="list-group-item-heading">Versão 0.0.50</h4>
+			<p class="list-group-item-text">Atuaçização de correção dos fluxos</p>
+		  </a>
+		</div>
+	</div>
+    <div role="tabpanel" class="tab-pane" id="messages">...3</div>
+    <div role="tabpanel" class="tab-pane" id="settings">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td colspan="2">Larry the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+  </div>
+
+</div>
+
+		</section>
+	<script src='popup.js'></script>
+	</body>
+</html>
